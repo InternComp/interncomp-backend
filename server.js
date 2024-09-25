@@ -1,23 +1,14 @@
-// filename: server.js
-//example using the http module
-const req = require('express/lib/request');
-const http = require('http');
+//example using Express.js
+const express = require('express');
+const app = express();
 
-// create a http server
-
-const server = http.createServer((req, res) => {
-        //set the response headers
-    res.writeHead(200, {'Content-Type': 'text/html'});
-
-    //Write the response content
-    res.write('<h1>Hello, Node.js HTTP Server!</h1>');
-    res.end();
+//Example defining a route in Express
+app.get('/', (req, res) => {
+    res.send('<h1>Hello, Express.js server!</h1>');
 });
 
-//specify the port to listen on
-const port = 3000;
-
-//Start the server
-server.listen(port, () => {
-    console.log(`Node.j HTTP Server is running on port ${port}`);
+//Example specifying the port and starting the server
+const port = process.env.PORT || 3000; //You can use environment variables for port configuration
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
