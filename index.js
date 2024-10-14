@@ -1,3 +1,12 @@
+require('dotenv').config();  // Load environment variables
+
+// Log to ensure the environment variables are loaded
+console.log('GOOGLE_CLIENT_ID:', process.env.GOOGLE_CLIENT_ID);
+console.log('GOOGLE_CLIENT_SECRET:', process.env.GOOGLE_CLIENT_SECRET);
+console.log('GOOGLE_CALLBACK_URL:', process.env.GOOGLE_CALLBACK_URL);
+
+console.log(process.env.GOOGLE_CLIENT_SECRET);
+const cors = require('cors');
 const express = require ('express');
 const passport = require('passport');
 const session = require('express-session');
@@ -11,6 +20,14 @@ function isloggedIn(req, res, next) {
     req.user ? next() : res.sendStatus(401);
 
 }
+
+app.use(cors({
+    origin: 'http://localhost:4000', 
+    credentials: true, 
+    methods: ['GET'], // need to allow get 
+    allowedHeaders: ['Content-Type', 'Authorization'] 
+}));
+
 
 app.get ('/', (req, res) => {
     res.sendFile ('index.html');
@@ -33,7 +50,7 @@ app.get('/auth/google',
 
 app.get( '/auth/google/callback',
     passport.authenticate( 'google', {
-        successRedirect: '/auth/protected',
+        successRedirect: 'http://localhost:4000/WelcomeNewUserPage',
         failureRedirect: '/auth/google/failure'
 }));
 
@@ -42,11 +59,10 @@ app.get('/auth/google/failure', (req,res) => {
 });
 
 app.get('/auth/protected', isloggedIn, (req,res)=>{
-    let name = req.user.displayName;
-    res.send(`Hello ${name}`);
+    res.json({ username: req.user.displayName });
 
 });
 
-app.listen (5000, () => {
-    console.log ('Listening on port 5000');
-});o
+app.listen (3000, () => {
+    console.log ('Listening on port 3000');
+});
