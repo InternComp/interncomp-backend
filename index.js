@@ -1,3 +1,11 @@
+const {PrismaClient}=require('@prisma/client');
+const cors = require('cors');
+const express = require ('express');
+const passport = require('passport');
+const session = require('express-session');
+const path = require ('path');
+const app = express ();
+const prisma = new PrismaClient();
 require('dotenv').config();  // Load environment variables
 
 // Log to ensure the environment variables are loaded
@@ -6,12 +14,7 @@ console.log('GOOGLE_CLIENT_SECRET:', process.env.GOOGLE_CLIENT_SECRET);
 console.log('GOOGLE_CALLBACK_URL:', process.env.GOOGLE_CALLBACK_URL);
 
 console.log(process.env.GOOGLE_CLIENT_SECRET);
-const cors = require('cors');
-const express = require ('express');
-const passport = require('passport');
-const session = require('express-session');
-const path = require ('path');
-const app = express ();
+
 require('./auth');
 app.use (express.json ());
 app.use (express.static (path.join (__dirname, 'client')));
@@ -59,8 +62,16 @@ app.get('/auth/google/failure', (req,res) => {
 });
 
 app.get('/auth/protected', isloggedIn, (req,res)=>{
-    res.json({ username: req.user.displayName });
+    res.json({ username: req.user.displayName , userid: req.user.id}, );
 
+});
+app.get('/user/:id',async(req,res) =>{
+    const {id} =req.params; //api request parameter which is user id in our case
+    const user=await prisma.user.findUnique({
+        where: {id:id}
+    });
+    if (user){res.json(user)}; //send user object to the front end where front end can decode the user info from 
+    //teh database 
 });
 
 app.listen (3000, () => {

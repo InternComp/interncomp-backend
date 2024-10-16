@@ -1,0 +1,44 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String    @id @default(uuid())
+  name       String
+  email      String
+  program    String?
+  university String?
+}
+
+model Reviews {
+  id         String    @id @default(uuid())
+  reviewerId String
+  companyId  String
+  company    Companies @relation(fields: [companyId], references: [id])
+  review     String
+  rating     Int
+}
+
+model Salaries {
+  id         String    @id @default(uuid())
+  companyId  String
+  company    Companies @relation(fields: [companyId], references: [id])
+  wtNumber   Int
+  salaryinfo String
+}
+
+model Companies {
+  id             String     @id @default(uuid())
+  info           String
+  linkedin       String
+  recruiterEmail String
+  careerPages    String
+  salaryInfo     String
+  reviews        Reviews[]
+  salaries       Salaries[]
+}
