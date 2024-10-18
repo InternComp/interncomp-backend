@@ -74,6 +74,15 @@ app.get('/user/:id',async(req,res) =>{
     //teh database 
 });
 
+app.get('/companies/:id',async(req,res) =>{
+    const {id} =req.params; //api request parameter which is company id in our case
+    const companies=await prisma.companies.findUnique({
+        where: {id:id}
+    });
+    if (companies){res.json(companies)}; //send company object to the front end where front end can decode the user info from 
+    //teh database 
+});
+
 app.listen (3000, () => {
     console.log ('Listening on port 3000');
 });
