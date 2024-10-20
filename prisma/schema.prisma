@@ -8,20 +8,29 @@ datasource db {
 }
 
 model User {
-  id         String    @id @default(uuid())
+  id         String  @id @default(uuid())
   name       String
   email      String
   program    String?
   university String?
 }
 
+enum limited_rating {
+  ZERO
+  ONE
+  TWO
+  THREE
+  FOUR
+  FIVE
+}
+
 model Reviews {
-  id         String    @id @default(uuid())
+  id         String         @id @default(uuid())
   reviewerId String
   companyId  String
-  company    Companies @relation(fields: [companyId], references: [id])
+  company    Companies      @relation(fields: [companyId], references: [id])
   review     String
-  rating     Int
+  rating     limited_rating
 }
 
 model Salaries {
@@ -29,16 +38,23 @@ model Salaries {
   companyId  String
   company    Companies @relation(fields: [companyId], references: [id])
   wtNumber   Int
-  salaryinfo String
+  salaryInfo String
 }
 
 model Companies {
-  id             String     @id @default(uuid())
-  info           String
-  linkedin       String
-  recruiterEmail String
-  careerPages    String
-  salaryInfo     String
-  reviews        Reviews[]
-  salaries       Salaries[]
+  id               String     @id @default(uuid())
+  description      String
+  culture          String?
+  benefits         String?
+  location         String
+  primaryIndustry  String
+  companySize      String
+  founded          Int
+  recruiterEmails  String[]
+  imagesAndBanners String
+  linkedin         String
+  careerPages      String
+  salaryInfo       String
+  reviews          Reviews[]
+  salaries         Salaries[]
 }
