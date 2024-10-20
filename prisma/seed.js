@@ -6,6 +6,7 @@ const prisma = new PrismaClient();
 
 const companies = [
   {
+    "name": "Verafin",
     "description": 'Verafin provides financial crime management software, focusing on anti-money laundering and fraud detection for financial institutions.',
     "culture": 'A collaborative and supportive atmosphere where employees work together, challenge each other, and contribute to a shared goal of innovation and growth.',
     "benefits": 'Comprehensive health coverage, stock options, and work-life balance programs.',
@@ -21,6 +22,7 @@ const companies = [
     "salaryInfo": 'Competitive salaries with stock options and performance bonuses.'
   },
   {
+    "name": "CoLab",
     "description": 'CoLab provides cloud-based collaboration software for mechanical engineering and hardware teams, enabling faster and more efficient design reviews.',
     "culture": 'CoLab is known for its collaborative, community-focused work environment. The company emphasizes teamwork, innovation, and giving back to the local community.',
     "benefits": 'Comprehensive benefits include stock options, flexible work arrangements, and health insurance.',
@@ -35,6 +37,7 @@ const companies = [
     "salaryInfo": 'Competitive salaries with performance-based incentives and stock options.'
   },
   {
+    "name": "Amazon",
     "description": 'Amazon is a global technology company specializing in e-commerce, cloud computing, digital streaming, and artificial intelligence.',
     "culture": 'A high-performance culture that emphasizes customer obsession, ownership, and innovation. Employees are encouraged to take risks and learn quickly in a fast-paced environment.',
     "benefits": 'Comprehensive health benefits, stock options, retirement plans, and work-from-home options. Employees also get discounts on Amazon products.',
@@ -49,6 +52,7 @@ const companies = [
     "salaryInfo": 'Competitive salaries with stock options and annual performance bonuses.'
   },
   {
+    "name": "Tesla",
     "description": 'Tesla is an electric vehicle and clean energy company focused on accelerating the world’s transition to sustainable energy through electric cars, solar products, and energy storage solutions.',
     "culture": 'A fast-paced and innovative environment where employees are encouraged to solve complex problems and push the boundaries of technology.',
     "benefits": 'Health insurance, stock options, and discounts on Tesla products, including electric vehicles and solar products.',
@@ -63,6 +67,7 @@ const companies = [
     "salaryInfo": 'Competitive salaries, stock options, and performance-based bonuses.'
   },
   {
+    "name": "Cenovus Energy",
     "description": 'Cenovus Energy is a Canadian-based integrated oil and gas company, engaged in oil sands projects, refining, natural gas, and crude oil production. It is one of the largest energy companies in Canada, following its acquisition of Husky Energy in 2021.',
     "culture": 'Cenovus fosters a safety-focused, innovative, and inclusive environment. The company emphasizes sustainability, Indigenous reconciliation, and collaboration in its operations.',
     "benefits": 'Comprehensive health and dental coverage, stock purchase plans, and wellness programs. Cenovus also provides flexible work arrangements and employee assistance programs.',
@@ -77,6 +82,7 @@ const companies = [
     "salaryInfo": 'Competitive salary packages with bonuses based on performance.'
   },
   {
+    "name":"Nokia",
     "description": "Nokia is a Finnish multinational company that provides telecommunications, information technology, and consumer electronics services worldwide. Nokia has made significant contributions to telecommunications infrastructure, including mobile telephony and 5G technology.",
     "culture": "Nokia fosters a culture of innovation, sustainability, and collaboration. With its focus on digital infrastructure, Nokia enables global connectivity while committing to sustainable practices and security.",
     "benefits": "Comprehensive health coverage, stock options, and performance bonuses. Employees also benefit from career development programs and flexible working arrangements.",
@@ -91,6 +97,7 @@ const companies = [
     "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."
   },
   {
+    "name":"BlackBerry",
     "description": "BlackBerry Limited is a Canadian company specializing in cybersecurity and software solutions. Originally founded as Research In Motion, BlackBerry played a pioneering role in the development of mobile communications technology and has since transitioned into providing cybersecurity, IoT, and embedded systems software.",
     "culture": "BlackBerry promotes a culture of innovation and resilience, focusing on security solutions for enterprises and governments worldwide. It emphasizes the importance of cybersecurity and privacy while fostering a collaborative environment.",
     "benefits": "Comprehensive health insurance, stock options, performance-based bonuses, and professional development programs. BlackBerry also offers flexible working arrangements.",
@@ -105,6 +112,7 @@ const companies = [
     "salaryInfo": "Competitive salaries with performance-based bonuses and stock options."
   },
   {
+    "name":"Seaspan",
     "description": "Seaspan Corporation is the world’s largest independent owner and operator of containerships, providing modern, high-quality vessels to major shipping companies worldwide. It is a key player in global maritime logistics, specializing in long-term, fixed-rate charters.",
     "culture": "Seaspan emphasizes a culture of operational excellence, safety, reliability, and environmental responsibility. The company fosters collaboration, diversity, and professional growth, supporting a global workforce across its fleet and offices.",
     "benefits": "Comprehensive benefits include health coverage, professional development programs, and global mobility opportunities. Seaspan also promotes environmental sustainability and safe working environments.",
@@ -119,6 +127,7 @@ const companies = [
     "salaryInfo": "Competitive salaries with performance-based bonuses."
   },
   {
+    "name":"Bell",
     "description": "Bell Canada is the country’s largest communications company, providing advanced Internet, wireless, TV, and business communication services. Bell delivers innovative solutions for both consumers and businesses across Canada, with a focus on 5G technology, media services, and cloud solutions.",
     "culture": "Bell fosters a people-first culture that values diversity and collaboration. The company focuses on innovation, customer experience, and sustainability, aiming to advance how Canadians connect with each other and the world.",
     "benefits": "Comprehensive health benefits, stock options, performance-based bonuses, and career development programs. Bell also promotes flexible working arrangements and community involvement through initiatives like Bell Let's Talk.",
@@ -133,6 +142,7 @@ const companies = [
     "salaryInfo": "Competitive salaries with stock options and performance-based bonuses."
   },
   {
+    "name":"Bombardier",
     "id": "company-10",
     "description": "Bombardier is a Canadian manufacturer specializing in business aircraft, offering design, production, and aftermarket services. Known for its iconic Learjet, Challenger, and Global series, Bombardier serves a wide range of clients, including multinational corporations and governments.",
     "culture": "Bombardier promotes a culture of innovation and precision, focusing on sustainability and operational excellence. The company supports its workforce with opportunities for professional growth and a commitment to safety and environmental responsibility.",
