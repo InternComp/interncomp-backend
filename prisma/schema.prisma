@@ -43,6 +43,7 @@ model Salaries {
 
 model Companies {
   id               String     @id @default(uuid())
+  name             String
   description      String
   culture          String?
   benefits         String?
