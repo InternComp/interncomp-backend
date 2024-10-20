@@ -15,7 +15,7 @@ const companies = [
     "companySize": 'Large',
     "founded": 2003,
     "recruiterEmails": ['xxx'],
-    "image": 'xxx',
+    "image": 'https://media.licdn.com/dms/image/v2/D4E0BAQGG8SZ7WgOpLw/company-logo_200_200/company-logo_200_200/0/1719256890099/verafin_logo?e=1737590400&v=beta&t=8uY7TXutiRePKIKD1qpYFPyGYBffIXY6jbKDE8pt4Mc',
     "banner": 'xxx',
     "linkedin": 'https://linkedin.com/company/verafin',
     "careerPages": 'https://verafin.com/careers',
@@ -31,7 +31,7 @@ const companies = [
     "companySize": 'Medium',
     "founded": 2017,
     "recruiterEmails": ['xxx'],
-    "image": 'xxx',
+    "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHbSGuaNdonfg/company-logo_200_200/company-logo_200_200/0/1632407145065/colabsoftware_logo?e=1737590400&v=beta&t=o07J3CRNXEftN3E6LyEl4583ygGhpPr5hNcVGTUaTxU',
     "linkedin": 'https://linkedin.com/company/colabsoftware',
     "careerPages": 'https://colabsoftware.com/careers',
     "salaryInfo": 'Competitive salaries with performance-based incentives and stock options.'
@@ -46,7 +46,7 @@ const companies = [
     "companySize": 'Large',
     "founded": 1994,
     "recruiterEmails": ['xxx'],
-    "image": 'xxx',
+    "image": 'https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_200_200/company-logo_200_200/0/1630640869849/amazon_logo?e=1737590400&v=beta&t=-DCmbQxK09G0KBpSuXP_y9r-b3FV1XGhJb6UgwpoSeI',
     "linkedin": 'https://www.linkedin.com/company/amazon',
     "careerPages": 'https://www.amazon.jobs',
     "salaryInfo": 'Competitive salaries with stock options and annual performance bonuses.'
@@ -61,7 +61,7 @@ const companies = [
     "companySize": 'Large',
     "founded": 2003,
     "recruiterEmails": ['xxx'],
-    "image": 'xxx',
+    "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHUcu98SZ2TVw/company-logo_200_200/company-logo_200_200/0/1630576446368/tesla_motors_logo?e=1737590400&v=beta&t=dV6plT0RdNgMgUOHYLkuopuUxGZ99TFtoWP7lbvf5ec',
     "linkedin": 'https://www.linkedin.com/company/tesla-motors',
     "careerPages": 'https://www.tesla.com/careers',
     "salaryInfo": 'Competitive salaries, stock options, and performance-based bonuses.'
@@ -76,7 +76,7 @@ const companies = [
     "companySize": 'Large',
     "founded": 2009,
     "recruiterEmails": ['xxx'],
-    "image": 'xxx',
+    "image": 'https://media.licdn.com/dms/image/v2/C560BAQF0LWhqSCovZg/company-logo_200_200/company-logo_200_200/0/1630638463303/cenovus_energy_logo?e=1737590400&v=beta&t=gxJECsbRWtmtb-mUGG1wH0z9fRMPcn9WHCWOOItQGpk',
     "linkedin": 'https://www.linkedin.com/company/cenovus-energy',
     "careerPages": 'https://www.cenovus.com/careers',
     "salaryInfo": 'Competitive salary packages with bonuses based on performance.'
@@ -91,7 +91,7 @@ const companies = [
     "companySize": "Large",
     "founded": 1865,
     "recruiterEmails": ["xxx"],
-    "image": "xxx",
+    "image": "https://media.licdn.com/dms/image/v2/C4E0BAQGL8hpduEqGKQ/company-logo_200_200/company-logo_200_200/0/1677420439270/nokia_logo?e=1737590400&v=beta&t=n8ZHX34Snn2k6jOCpSLFKt59trCv4XKY0Y6V5QDjA_0",
     "linkedin": "https://linkedin.com/company/nokia",
     "careerPages": "https://www.nokia.com/careers",
     "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."
@@ -106,7 +106,7 @@ const companies = [
     "companySize": "Medium",
     "founded": 1984,
     "recruiterEmails": ["xxx"],
-    "image": "xxx",
+    "image": "https://media.licdn.com/dms/image/v2/C560BAQEHnvbvfKCsDg/company-logo_100_100/company-logo_100_100/0/1630575741184/blackberry_logo?e=1737590400&v=beta&t=CneuAnnBjDnWYgw4uFpyKmO1940lvw6DdYgGwFID01o",
     "linkedin": "https://www.linkedin.com/company/blackberry",
     "careerPages": "https://www.blackberry.com/careers",
     "salaryInfo": "Competitive salaries with performance-based bonuses and stock options."
@@ -121,7 +121,7 @@ const companies = [
     "companySize": "Large",
     "founded": 2000,
     "recruiterEmails": ["xxx"],
-    "image": "xxx",
+    "image": "https://media.licdn.com/dms/image/v2/C4E0BAQEEcufOwTR8dA/company-logo_200_200/company-logo_200_200/0/1633723162870/seaspan_ulc_logo?e=1737590400&v=beta&t=ljXwkof8j_aw8ml52W1TLDVMipHYXU8VuVnFV_Nocuk",
     "linkedin": "https://www.linkedin.com/company/seaspan-corporation",
     "careerPages": "https://www.seaspancorp.com/careers",
     "salaryInfo": "Competitive salaries with performance-based bonuses."
@@ -136,7 +136,7 @@ const companies = [
     "companySize": "Large",
     "founded": 1880,
     "recruiterEmails": ["xxx"],
-    "image": "xxx",
+    "image": "https://media.licdn.com/dms/image/v2/D560BAQH4vgnYVp30eA/company-logo_200_200/company-logo_200_200/0/1688653379143?e=1737590400&v=beta&t=rC_3tNuGbM_1zRcyORDiXYWZVNPHVELLbkTX4Bv6vH0",
     "linkedin": "https://www.linkedin.com/company/bell",
     "careerPages": "https://jobs.bell.ca/ca/en",
     "salaryInfo": "Competitive salaries with stock options and performance-based bonuses."
@@ -152,7 +152,7 @@ const companies = [
     "companySize": "Large",
     "founded": 1902,
     "recruiterEmails": ["xxx"],
-    "image": "xxx",
+    "image": "https://media.licdn.com/dms/image/v2/D4D0BAQHFre9L1IbnyA/company-logo_200_200/company-logo_200_200/0/1713990496093/bombardier_logo?e=1737590400&v=beta&t=AG98DvnOX7kLsOzx5lATu9mbFZQ_RdjBZRhKiAVhRmY",
     "linkedin": "https://www.linkedin.com/company/bombardier",
     "careerPages": "https://www.bombardier.com/en/careers",
     "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."

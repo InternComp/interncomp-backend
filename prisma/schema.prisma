@@ -60,3 +60,4 @@ model Companies {
   reviews          Reviews[]
   salaries         Salaries[]
 }
+

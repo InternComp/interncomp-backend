@@ -25,7 +25,7 @@ function isloggedIn(req, res, next) {
 }
 
 app.use(cors({
-    origin: 'http://localhost:4000', 
+    origin: ['http://localhost:4000'],
     credentials: true, 
     methods: ['GET'], // need to allow get 
     allowedHeaders: ['Content-Type', 'Authorization'] 
@@ -81,6 +81,16 @@ app.get('/companies/:id',async(req,res) =>{
     });
     if (companies){res.json(companies)}; //send company object to the front end where front end can decode the user info from 
     //teh database 
+});
+
+app.get('/companies',async(req,res) =>{
+    try{
+        const companies = await prisma.companies.findMany();
+        res.status(200).json(companies);
+    }
+    catch (error){
+        res.status(500).json({error: "Unable to fetch companies"});
+    }
 });
 
 app.listen (3000, () => {
