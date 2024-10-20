@@ -51,7 +51,8 @@ model Companies {
   companySize      String
   founded          Int
   recruiterEmails  String[]
-  imagesAndBanners String
+  image            String?
+  banner           String?
   linkedin         String
   careerPages      String
   salaryInfo       String
