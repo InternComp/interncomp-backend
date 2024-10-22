@@ -16,7 +16,7 @@ const companies = [
     "founded": 2003,
     "recruiterEmails": ['xxx'],
     "image": 'https://media.licdn.com/dms/image/v2/D4E0BAQGG8SZ7WgOpLw/company-logo_200_200/company-logo_200_200/0/1719256890099/verafin_logo?e=1737590400&v=beta&t=8uY7TXutiRePKIKD1qpYFPyGYBffIXY6jbKDE8pt4Mc',
-    "banner": 'https://verafin.com/wp-content/themes/material-verafin-2.5-prod/i/Nasdaq-Verafin-Logo.png',
+    "banner": 'https://www.expertinvestor.net/images/news/verafin-nasdaq.jpg',
     "linkedin": 'https://linkedin.com/company/verafin',
     "careerPages": 'https://verafin.com/careers',
     "salaryInfo": 'Competitive salaries with stock options and performance bonuses.'
@@ -32,7 +32,7 @@ const companies = [
     "founded": 2017,
     "recruiterEmails": ['xxx'],
     "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHbSGuaNdonfg/company-logo_200_200/company-logo_200_200/0/1632407145065/colabsoftware_logo?e=1737590400&v=beta&t=o07J3CRNXEftN3E6LyEl4583ygGhpPr5hNcVGTUaTxU',
-    "banner":"https://cdn.prod.website-files.com/5e4d9854e6dad067f4b514b3/6638ca8bb1d6847949e819cc_Home%20Page%20Hero.webp",
+    "banner":"https://media.licdn.com/dms/image/v2/D5616AQGVpXbgGSIptQ/profile-displaybackgroundimage-shrink_200_800/profile-displaybackgroundimage-shrink_200_800/0/1715682091381?e=2147483647&v=beta&t=kHlp0cbjr6bLGNRhzB99X0fLrMd2vDA5lqCoEwTbiEw",
     "linkedin": 'https://linkedin.com/company/colabsoftware',
     "careerPages": 'https://colabsoftware.com/careers',
     "salaryInfo": 'Competitive salaries with performance-based incentives and stock options.'
@@ -112,7 +112,7 @@ const companies = [
     "founded": 1984,
     "recruiterEmails": ["xxx"],
     "image": "https://media.licdn.com/dms/image/v2/C560BAQEHnvbvfKCsDg/company-logo_100_100/company-logo_100_100/0/1630575741184/blackberry_logo?e=1737590400&v=beta&t=CneuAnnBjDnWYgw4uFpyKmO1940lvw6DdYgGwFID01o",
-    "banner": "https://www.blackberry.com/content/dam/bbcomv4/blackberry-com/en/homepage/threat-report-sept_hp-loop.mp4",
+    "banner": "https://wallpapers.com/images/featured/blackberry-391nbrlo3u7zur8y.jpg",
     "linkedin": "https://www.linkedin.com/company/blackberry",
     "careerPages": "https://www.blackberry.com/careers",
     "salaryInfo": "Competitive salaries with performance-based bonuses and stock options."
@@ -161,7 +161,7 @@ const companies = [
     "founded": 1902,
     "recruiterEmails": ["xxx"],
     "image": "https://media.licdn.com/dms/image/v2/D4D0BAQHFre9L1IbnyA/company-logo_200_200/company-logo_200_200/0/1713990496093/bombardier_logo?e=1737590400&v=beta&t=AG98DvnOX7kLsOzx5lATu9mbFZQ_RdjBZRhKiAVhRmY",
-    "banner": "https://bombardier.com/sites/default/files/2024-04/reBrandGL_7500-web1440x1080.jpg",
+    "banner": "https://businessaircraft.bombardier.com/sites/default/files/styles/retina_2700x900/public/2020-04/WEB_DDBA0000_Global7500_2017_Shanghai_March2019_V4-web.jpg?itok=n8Akn0xd",
     "linkedin": "https://www.linkedin.com/company/bombardier",
     "careerPages": "https://www.bombardier.com/en/careers",
     "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."
