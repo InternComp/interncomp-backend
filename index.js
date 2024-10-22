@@ -25,7 +25,7 @@ function isloggedIn(req, res, next) {
 }
 
 app.use(cors({
-    origin: 'http://localhost:4000', 
+    origin: ['http://localhost:4000'],
     credentials: true, 
     methods: ['GET'], // need to allow get 
     allowedHeaders: ['Content-Type', 'Authorization'] 
@@ -71,7 +71,26 @@ app.get('/user/:id',async(req,res) =>{
         where: {id:id}
     });
     if (user){res.json(user)}; //send user object to the front end where front end can decode the user info from 
-    //teh database 
+    // the database 
+});
+
+app.get('/companies/:id',async(req,res) =>{
+    const {id} =req.params; //api request parameter which is company id in our case
+    const companies=await prisma.companies.findUnique({
+        where: {id:id}
+    });
+    if (companies){res.json(companies)}; //send company object to the front end where front end can decode the user info from 
+    // the database 
+});
+
+app.get('/companies',async(req,res) =>{
+    try{
+        const companies = await prisma.companies.findMany();
+        res.status(200).json(companies);
+    }
+    catch (error){
+        res.status(500).json({error: "Unable to fetch companies"});
+    }
 });
 
 app.listen (3000, () => {
