@@ -11,11 +11,17 @@ RUN npm install
 # Copy the rest of the backend code
 COPY . .
 
+RUN chmod +x wait-for-it.sh
+
 # Generate Prisma client
 RUN npx prisma generate
+
 
 # Expose the port on which the backend server runs
 EXPOSE 3000
 
 # Start the backend with nodemon for live-reloading
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+
+CMD ["/bin/sh", "-c", "npx prisma migrate reset --force && npx prisma migrate deploy  && npm run seed && npm run dev"]
+# CMD ["npx", "prisma", "migrate", "reset", "--force", "&&", "npx", "prisma", "migrate", "deploy", "&&", "npm", "run", "seed", "&&", "./wait-for-it.sh", "postgres:5432", "--", "npm", "run", "dev"]
