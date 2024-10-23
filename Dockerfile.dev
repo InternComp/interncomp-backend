@@ -1,0 +1,21 @@
+# Use an official Node.js runtime as the base image
+FROM node:20-alpine
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Install dependencies only when needed
+COPY package*.json ./
+RUN npm install
+
+# Copy the rest of the backend code
+COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate
+
+# Expose the port on which the backend server runs
+EXPOSE 3000
+
+# Start the backend with nodemon for live-reloading
+CMD ["npm", "run", "dev"]
