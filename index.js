@@ -119,10 +119,10 @@ app.post('/jobs', async (req, res) => {
 app.get('/jobs', async (req, res) => {
     try {
         const jobs = await prisma.job.findMany({
-            include: {
-                reviews: true,
-                salaries: true
-            }
+            //include: {
+                //reviews: true,
+                //salaries: true
+           // }
         });
       res.json(jobs);
     } catch (error) {
@@ -139,8 +139,8 @@ app.get('/jobs/:id', async (req, res) => {
         const job = await prisma.job.findUnique({
             where: { id },
             include: {
-                reviews: true,
-                salaries: true
+                //reviews: true,
+                //salaries: true
             }
         });
         if (job) {
@@ -155,7 +155,7 @@ app.get('/jobs/:id', async (req, res) => {
 });
   
   // Update a Job by ID
-app.put('/api/jobs/:id', async (req, res) => {
+app.put('/jobs/:id', async (req, res) => {
     const { id } = req.params;
     const { description, linkedin, recruiterEmail, careerPages, salaryInfo, skillsRequired } = req.body;
   
@@ -179,7 +179,7 @@ app.put('/api/jobs/:id', async (req, res) => {
 });
   
   // Delete a Job by ID
-app.delete('/api/jobs/:id', async (req, res) => {
+app.delete('/jobs/:id', async (req, res) => {
     const { id } = req.params;
   
     try {

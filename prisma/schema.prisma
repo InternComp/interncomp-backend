@@ -68,7 +68,5 @@ model Job {
   recruiterEmail String
   careerPages    String
   salaryInfo     String
-  reviews        Reviews[]
-  salaries       Salaries[]
   skillsRequired String
 }
