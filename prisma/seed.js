@@ -64,7 +64,7 @@ const companies = [
     "founded": 2003,
     "recruiterEmails": ['xxx'],
     "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHUcu98SZ2TVw/company-logo_200_200/company-logo_200_200/0/1630576446368/tesla_motors_logo?e=1737590400&v=beta&t=dV6plT0RdNgMgUOHYLkuopuUxGZ99TFtoWP7lbvf5ec',
-    "banner": 'https://media.licdn.com/dms/image/v2/C561BAQFqQXNCkzg_Uw/company-background_10000/company-background_10000/0/1635791699664/tesla_motors_cover?e=1730142000&v=beta&t=BPHcRW41yyWJJ9yfaD2QDYUrB1TCdmdNNzpEoAdHqa4',
+    "banner": 'https://media.licdn.com/dms/image/v2/C561BAQFqQXNCkzg_Uw/company-background_10000/company-background_10000/0/1635791699664/tesla_motors_cover?e=1730916000&v=beta&t=iyI7nEG3QNLPwOFjFX0hZtFvbq23l8IL5eXORklgPB8',
     "linkedin": 'https://www.linkedin.com/company/tesla-motors',
     "careerPages": 'https://www.tesla.com/careers',
     "salaryInfo": 'Competitive salaries, stock options, and performance-based bonuses.'
