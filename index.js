@@ -95,17 +95,27 @@ app.get('/companies',async(req,res) =>{
 
 // Create a new Job
 app.post('/jobs', async (req, res) => {
-    const { description, linkedin, recruiterEmail, careerPages, salaryInfo, skillsRequired } = req.body;
+    const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo} = req.body;
   
     try {
         const newJob = await prisma.job.create({
             data: {
-                description,
-                linkedin,
-                recruiterEmail,
+                companyImage,
+                companyName,
+                title,
                 careerPages,
-                salaryInfo,
-                skillsRequired
+                description,
+                location,
+                employmentType,
+                workType,
+                internType,
+                jobLink,
+                linkedin,
+                skillsRequired,
+                basicQualifications,
+                preferredQualifications,
+                keyResponsibilities,
+                additionalInfo
             },
         });
         res.status(201).json(newJob);
@@ -157,18 +167,28 @@ app.get('/jobs/:id', async (req, res) => {
   // Update a Job by ID
 app.put('/jobs/:id', async (req, res) => {
     const { id } = req.params;
-    const { description, linkedin, recruiterEmail, careerPages, salaryInfo, skillsRequired } = req.body;
+    const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo } = req.body;
   
     try {
       const updatedJob = await prisma.job.update({
         where: { id },
             data: {
-            description,
-            linkedin,
-            recruiterEmail,
-            careerPages,
-            salaryInfo,
-            skillsRequired
+                companyImage,
+                companyName,
+                title,
+                careerPages,
+                description,
+                location,
+                employmentType,
+                workType,
+                internType,
+                jobLink,
+                linkedin,
+                skillsRequired,
+                basicQualifications,
+                preferredQualifications,
+                keyResponsibilities,
+                additionalInfo
             }
         });
         res.json(updatedJob);
