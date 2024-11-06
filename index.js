@@ -95,13 +95,16 @@ app.get('/companies',async(req,res) =>{
 
 // Create a new Job
 app.post('/jobs', async (req, res) => {
-    const { description, linkedin, skillsRequired } = req.body;
+    const { description, linkedin, recruiterEmail, careerPages, salaryInfo, skillsRequired } = req.body;
   
     try {
         const newJob = await prisma.job.create({
             data: {
                 description,
                 linkedin,
+                recruiterEmail,
+                careerPages,
+                salaryInfo,
                 skillsRequired
             },
         });
