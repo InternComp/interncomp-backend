@@ -29,7 +29,7 @@ model Reviews {
   reviewerId String
   companyId  String
   company    Companies      @relation(fields: [companyId], references: [id])
-  review     String
+  content    String
   rating     limited_rating
 }
 
