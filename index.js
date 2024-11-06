@@ -118,7 +118,7 @@ app.post('/jobs', async (req, res) => {
   // Get all Jobs
 app.get('/jobs', async (req, res) => {
     try {
-        const jobs = await prisma.job.findMany({
+        const jobs = await prisma.jobs.findMany({
             //include: {
                 //reviews: true,
                 //salaries: true
@@ -136,7 +136,7 @@ app.get('/jobs/:id', async (req, res) => {
     const { id } = req.params;
   
     try {
-        const job = await prisma.job.findUnique({
+        const job = await prisma.jobs.findUnique({
             where: { id },
             include: {
                 //reviews: true,
@@ -144,7 +144,7 @@ app.get('/jobs/:id', async (req, res) => {
             }
         });
         if (job) {
-            res.json(job);
+            res.status(200).json(job);
         } else {
             res.status(404).json({ error: 'Job not found' });
         }
