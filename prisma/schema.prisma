@@ -12,7 +12,10 @@ model User {
   name       String
   email      String
   program    String?
-  university String?
+  institution String?
+  location   String?
+  gender  String?
+
 }
 
 enum limited_rating {
