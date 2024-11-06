@@ -62,7 +62,7 @@ app.get('/auth/google/failure', (req,res) => {
 });
 
 app.get('/auth/protected', isloggedIn, (req,res)=>{
-    res.json({ username: req.user.displayName , userid: req.user.id}, );
+    res.json({ username: req.user.displayName , userid: req.user.id, email: req.user.email}, );
 
 });
 app.get('/user/:id',async(req,res) =>{

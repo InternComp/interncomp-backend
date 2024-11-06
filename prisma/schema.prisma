@@ -18,6 +18,20 @@ model User {
 
 }
 
+model Recruiter {
+  id    String  @id @default(uuid())
+  name  String
+  email String
+  company Companies      @relation(fields: [companyId], references: [id])
+  location String?
+}
+
+model Jobs {
+  id        String  @id @default(uuid())
+  company   Companies      @relation(fields: [companyId], references: [id])
+  recruiter  Recruiter      @relation(fields:  [recruiterId], references: [id])
+}
+
 enum limited_rating {
   ZERO
   ONE
