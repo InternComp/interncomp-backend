@@ -13,25 +13,25 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # - name: Run Super-Linter
-      #   uses: github/super-linter@v4
-      #   env:
-      #     DEFAULT_BRANCH: main
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.x'
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '16.x'
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
-      - name: ESLint
-        run: npx eslint .
+      # - name: ESLint
+      #   run: npm run lint
 
-      - name: Install YAML Lint
-        run: npm install -g yaml-lint
+      # - name: Install YAML Lint
+      #   run: npm install -g yaml-lint
 
-      - name: Run YAML Lint
-        run: yaml-lint .github/workflows/linter.yaml
+      # - name: Run YAML Lint
+      #   run: yaml-lint .github/workflows/linter.yaml
