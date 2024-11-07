@@ -24,13 +24,14 @@ enum limited_rating {
   FIVE
 }
 
-model Reviews {
-  id         String         @id @default(uuid())
-  reviewerId String
-  companyId  String
-  company    Companies      @relation(fields: [companyId], references: [id])
-  content    String
-  rating     limited_rating
+model Review {
+  id        Int        @id @default(autoincrement()) // Primary key, auto-increments
+  rating    Int // Rating field (integer, e.g., 1 to 5)
+  text      String // Review content (text)
+  reviewer  String // Name of the reviewer
+  createdAt DateTime   @default(now()) // Timestamp when review is created
+  companyId String? // Foreign key to the Companies model
+  company   Companies? @relation(fields: [companyId], references: [id])
 }
 
 model Salaries {
@@ -42,22 +43,21 @@ model Salaries {
 }
 
 model Companies {
-  id               String     @id @default(uuid())
-  name             String
-  description      String
-  culture          String?
-  benefits         String?
-  location         String
-  primaryIndustry  String
-  companySize      String
-  founded          Int
-  recruiterEmails  String[]
-  image            String?
-  banner           String?
-  linkedin         String
-  careerPages      String
-  salaryInfo       String
-  reviews          Reviews[]
-  salaries         Salaries[]
+  id              String     @id @default(uuid())
+  name            String
+  description     String
+  culture         String?
+  benefits        String?
+  location        String
+  primaryIndustry String
+  companySize     String
+  founded         Int
+  recruiterEmails String[]
+  image           String?
+  banner          String?
+  linkedin        String
+  careerPages     String
+  salaryInfo      String
+  reviews         Review[]
+  salaries        Salaries[]
 }
-

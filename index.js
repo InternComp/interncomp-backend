@@ -5,8 +5,8 @@ const passport = require('passport');
 const session = require('express-session');
 const path = require ('path');
 const app = express ();
-const prisma = new PrismaClient();
 const review = require('./review');
+const prisma = new PrismaClient();
 require('dotenv').config();  // Load environment variables
 
 // Log to ensure the environment variables are loaded
@@ -27,7 +27,7 @@ function isloggedIn(req, res, next) {
 
 
 app.use(cors({
-    origin: ['http://localhost:4000', 'http://127.0.0.1:5500'],
+    origin: ['http://localhost:4000'],
     credentials: true,
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization'],
@@ -95,9 +95,9 @@ app.get('/companies',async(req,res) =>{
     }
 });
 
+app.use('/api/reviews', review);
 
-// Routes
-app.use('/review', review); // Use review microservice
+
 
 app.listen(3000, () => {
   console.log('Listening on port 3000');
