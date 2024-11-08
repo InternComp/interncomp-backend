@@ -14,16 +14,10 @@ console.log('GOOGLE_CLIENT_ID:', process.env.GOOGLE_CLIENT_ID);
 console.log('GOOGLE_CLIENT_SECRET:', process.env.GOOGLE_CLIENT_SECRET);
 console.log('GOOGLE_CALLBACK_URL:', process.env.GOOGLE_CALLBACK_URL);
 
-console.log(process.env.GOOGLE_CLIENT_SECRET);
 
 require('./auth');
 app.use (express.json ());
 app.use (express.static (path.join (__dirname, 'client')));
-
-function isloggedIn(req, res, next) {
-    req.user ? next() : res.sendStatus(401);
-
-}
 
 
 app.use(cors({
@@ -41,7 +35,7 @@ app.get ('/', (req, res) => {
 app.use(session({
     secret:'keyboard cat',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     cookie: { secure: false }
   }));
 
@@ -63,7 +57,7 @@ app.get('/auth/google/failure', (req,res) => {
     res.send("Something went wrong!");
 });
 
-app.get('/auth/protected', isloggedIn, (req,res)=>{
+app.get('/auth/protected', (req,res)=>{
     res.json({ username: req.user.displayName , userid: req.user.id}, );
 
 });
@@ -97,6 +91,9 @@ app.get('/companies',async(req,res) =>{
 
 app.use('/api/reviews', review);
 
+app.get('/debug-session', (req, res) => {
+    res.json({ user: req.user });
+});
 
 
 app.listen(3000, () => {

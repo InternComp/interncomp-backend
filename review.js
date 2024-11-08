@@ -4,11 +4,6 @@ const router = express.Router();
 
 const prisma = new PrismaClient();
 
-// Middleware to check if user is logged in
-function isloggedIn(req, res, next) {
-    console.log(req.user);
-    req.user ? next() : res.sendStatus(401); // Sends 401 Unauthorized if not logged in
-}
 
 // GET all reviews
 router.get('/', async (req, res) => {
@@ -22,9 +17,9 @@ router.get('/', async (req, res) => {
 });
 
 // POST a new review (only if authenticated)
-router.post('/', isloggedIn, async (req, res) => {
-    const { reviewer, rating, text, companyName } = req.body;
-    console.log(reviewer);
+router.post('/', async (req, res) => {
+    const {reviewer, rating, text, companyName } = req.body;
+
 
     // Validate required fields
     if (!reviewer || !rating || !text || !companyName) {
