@@ -60,4 +60,21 @@ model Companies {
   reviews          Reviews[]
   salaries         Salaries[]
 }
-
+model Jobs {
+  id                       String     @id @default(uuid())
+  companyImage             String
+  companyName              String
+  title                    String
+  description              String
+  location                 String
+  employmentType           String
+  workType                 String
+  internType               String
+  jobLink                  String
+  linkedin                 String
+  skillsRequired           String[]
+  basicQualifications      String[]
+  preferredQualifications  String[]
+  keyResponsibilities      String[]
+  additionalInfo           String
+}

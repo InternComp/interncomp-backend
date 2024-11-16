@@ -93,6 +93,129 @@ app.get('/companies',async(req,res) =>{
     }
 });
 
+
+// Create a new Job
+app.post('/jobs', async (req, res) => {
+    const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo} = req.body;
+  
+    try {
+        const newJob = await prisma.job.create({
+            data: {
+                companyImage,
+                companyName,
+                title,
+                careerPages,
+                description,
+                location,
+                employmentType,
+                workType,
+                internType,
+                jobLink,
+                linkedin,
+                skillsRequired,
+                basicQualifications,
+                preferredQualifications,
+                keyResponsibilities,
+                additionalInfo
+            },
+        });
+        res.status(201).json(newJob);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to create job' });
+    }
+});
+  
+  // Get all Jobs
+app.get('/jobs', async (req, res) => {
+    try {
+        const jobs = await prisma.jobs.findMany({
+            //include: {
+                //reviews: true,
+                //salaries: true
+           // }
+        });
+      res.json(jobs);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch jobs' });
+    }
+});
+  
+  // Get a specific Job by ID
+app.get('/jobs/:id', async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+        const job = await prisma.jobs.findUnique({
+            where: { id },
+            include: {
+                //reviews: true,
+                //salaries: true
+            }
+        });
+        if (job) {
+            res.status(200).json(job);
+        } else {
+            res.status(404).json({ error: 'Job not found' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch job' });
+    }
+});
+  
+  // Update a Job by ID
+app.put('/jobs/:id', async (req, res) => {
+    const { id } = req.params;
+    const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo } = req.body;
+  
+    try {
+      const updatedJob = await prisma.job.update({
+        where: { id },
+            data: {
+                companyImage,
+                companyName,
+                title,
+                careerPages,
+                description,
+                location,
+                employmentType,
+                workType,
+                internType,
+                jobLink,
+                linkedin,
+                skillsRequired,
+                basicQualifications,
+                preferredQualifications,
+                keyResponsibilities,
+                additionalInfo
+            }
+        });
+        res.json(updatedJob);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to update job' });
+    }
+});
+  
+  // Delete a Job by ID
+app.delete('/jobs/:id', async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+        await prisma.job.delete({
+        where: { id }
+      });
+      res.status(204).send();
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Failed to delete job' });
+    }
+});
+  
+
+
 app.listen (3000, () => {
     console.log ('Listening on port 3000');
 });
