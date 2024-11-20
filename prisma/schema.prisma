@@ -8,11 +8,14 @@ datasource db {
 }
 
 model User {
-  id         String  @id @default(uuid())
-  name       String
-  email      String
-  program    String?
-  university String?
+  id            String  @id @default(uuid())
+  name          String
+  email         String
+  program       String?
+  university    String?
+  location      String?
+  institution   String?
+  gender        String?
 }
 
 enum limited_rating {

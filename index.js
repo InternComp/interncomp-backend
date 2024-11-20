@@ -62,7 +62,7 @@ app.get('/auth/google/failure', (req,res) => {
 });
 
 app.get('/auth/protected', isloggedIn, (req,res)=>{
-    res.json({ username: req.user.displayName , userid: req.user.id}, );
+    res.json({ username: req.user.displayName , userid: req.user.id,email:req.user.email} );
 
 });
 app.get('/user/:id',async(req,res) =>{
@@ -73,6 +73,33 @@ app.get('/user/:id',async(req,res) =>{
     if (user){res.json(user)}; //send user object to the front end where front end can decode the user info from 
     //teh database 
 });
+
+app.post('/user/:id',async(req,res)=>{
+    const {id} =req.params; //api request parameter which is user id in our case
+    const{name, program, university,location,institution,gender}=req.body;
+    const user=await prisma.user.findUnique({
+        where: {id:id}
+    });
+    if(user){
+        const setUser=await prisma.user.update({
+            where: {id:id},
+            data:{
+                name, 
+                program, 
+                university,
+                location,
+                institution,
+                gender         
+            }
+        });
+        console.log(setUser)
+        res.json({ data: setUser })
+    }
+
+}
+    
+
+)
 
 app.get('/companies/:id',async(req,res) =>{
     const {id} =req.params; //api request parameter which is company id in our case
