@@ -101,13 +101,44 @@ app.post('/user/:id',async(req,res)=>{
 
 )
 
+app.post('/companies/:id/reviews', async (req, res) => {
+    //find company using its id then, the company object has a review array, push a review object to THAT reviews array
+    const { id } = req.params;  
+    const { reviewerId, companyId, review_text, rating} = req.body;
+    try {
+        
+        const company = await prisma.companies.findUnique({
+            where: { id: id }
+        });
+        console.log(req.body);
+        //we create a new review object from the incoming data
+        const newReview=await prisma.reviews.create({
+            
+            data:{
+                reviewerId: String(reviewerId),
+                companyId: companyId,
+                review: review_text,
+                rating: rating
+            }
+        })
+
+        //I dont think we need to send the newReview back a reload should update it? prompt a reload maybe?
+        //adding a review with a companyID should automatically associate it to the company in the database
+    } catch (error) {
+        console.error('Failed:', error);
+        res.status(500).send('Internal server error');
+    }
+});
+
+
 app.get('/companies/:id',async(req,res) =>{
     const {id} =req.params; //api request parameter which is company id in our case
     const companies=await prisma.companies.findUnique({
-        where: {id:id}
+        where: {id:id},
+        include: {reviews: true}
     });
     if (companies){res.json(companies)}; //send company object to the front end where front end can decode the user info from 
-    //teh database 
+    //the database 
 });
 
 app.get('/companies',async(req,res) =>{
