@@ -103,7 +103,7 @@ app.post('/jobs', async (req, res) => {
                 companyImage,
                 companyName,
                 title,
-                careerPages,
+                //careerPages,
                 description,
                 location,
                 employmentType,
