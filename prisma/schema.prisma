@@ -14,7 +14,7 @@ model User {
   program    String?
   institution String?
   location   String?
-  gender  String?
+  profilePhoto File?
 
 }
 

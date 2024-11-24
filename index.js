@@ -93,6 +93,20 @@ app.get('/companies',async(req,res) =>{
     }
 });
 
+app.get('/auth/logout', (req, res) => {
+    req.logout(err => {
+        if (err) {
+            return res.status(500).send("Logout failed");
+        }
+        req.session.destroy(() => {
+            res.clearCookie('connect.sid'); // Adjust cookie name if needed
+            res.status(200).send("Logged out successfully");
+        });
+    });
+});
+
+
 app.listen (3000, () => {
     console.log ('Listening on port 3000');
 });
+
