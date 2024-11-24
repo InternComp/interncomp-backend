@@ -64,7 +64,7 @@ const companies = [
     "founded": 2003,
     "recruiterEmails": ['xxx'],
     "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHUcu98SZ2TVw/company-logo_200_200/company-logo_200_200/0/1630576446368/tesla_motors_logo?e=1737590400&v=beta&t=dV6plT0RdNgMgUOHYLkuopuUxGZ99TFtoWP7lbvf5ec',
-    "banner": 'https://media.licdn.com/dms/image/v2/C561BAQFqQXNCkzg_Uw/company-background_10000/company-background_10000/0/1635791699664/tesla_motors_cover?e=1730142000&v=beta&t=BPHcRW41yyWJJ9yfaD2QDYUrB1TCdmdNNzpEoAdHqa4',
+    "banner": 'https://media.licdn.com/dms/image/v2/C561BAQFqQXNCkzg_Uw/company-background_10000/company-background_10000/0/1635791699664/tesla_motors_cover?e=1732327200&v=beta&t=fspBv5uykwLw-b9XmfahQclE-kdAKwW5Y28gE6UZqYY',
     "linkedin": 'https://www.linkedin.com/company/tesla-motors',
     "careerPages": 'https://www.tesla.com/careers',
     "salaryInfo": 'Competitive salaries, stock options, and performance-based bonuses.'
@@ -167,11 +167,109 @@ const companies = [
     "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."
   }    
 ];
+const jobs = [
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_100_100/company-logo_100_100/0/1630640869849/amazon_logo?e=1738800000&v=beta&t=MRR139bOgOiLg5yCuJalxOQW4m2wzl4Jo6dCSXPvDgg",
+    "companyName": "Amazon",
+    "title": "Software Development Engineer Co-op and Intern",
+    "description": "Are you inspired by invention? Is problem solving through teamwork in your DNA? Do you like the idea of seeing how your work impacts the bigger picture? Answer yes to any of these and you’ll fit right in here at Amazon Robotics. We are a smart team of doers who work passionately to apply cutting edge advances in robotics and software to solve real-world challenges that will transform our customers’ experiences. We invent new improvements every day. We are Amazon Robotics and we will give you the tools and support you need to invent with us in ways that are rewarding, fulfilling, and fun. Amazon Robotics, a wholly owned subsidiary of Amazon.com, empowers a smarter, faster, more consistent customer experience through automation. Amazon Robotics automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands. Amazon Robotics has a dedicated focus on research and development to continuously explore new opportunities to extend its product lines into new areas.",
+    "location": "Toronto, ON, Canada",
+    "employmentType": "Internship",
+    "workType": "Full-time",
+    "internType": "Winter 2025",
+    "jobLink": "https://www.amazon.jobs/en/jobs/2750005/amazon-robotics-software-development-engineer-co-op-and-intern-2025-toronto?cmpid=SPLICX0248M&ss=paid&utm_campaign=cxro&utm_content=job_posting&utm_medium=social_media&utm_source=linkedin.com",
+    "linkedin": "https://www.linkedin.com/company/amazon/",
+    "skillsRequired": ["Python", "C++", "Software Development", "Robotics", "Object-Oriented Design", "Algorithms", "Data Structures"],
+    "basicQualifications": [
+      "Knowledge of computer science fundamentals such as object-oriented design, operating systems, algorithms, data structures, and complexity analysis",
+      "Experience with at least one modern programming language such as Python, C++, or Java",
+      "Strong problem-solving skills and a passion for innovation"
+    ],
+    "preferredQualifications": [
+      "Experience with distributed systems and relational databases",
+      "Knowledge of C/C++, Python, or Java",
+      "Familiarity with robotics, machine learning, or data analysis"
+    ],
+    "additionalInfo": "Amazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate based on race, national origin, gender, gender identity, sexual orientation, disability, age, or other legally protected status."
+  },
+
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQEkjpiqeCK9Ag/company-logo_200_200/company-logo_200_200/0/1654804896089/amd_logo?e=1738800000&v=beta&t=kPGKtIgayblufH9aMX9edmhGudWMzqgNOgaa-PCaoyg", 
+    "companyName": "AMD", 
+    "title": "Software Engineering Intern/Co-op",
+    "description": "An exciting opportunity to contribute to AMD's next generation of technology innovations awaits you! We foster a high-energy, diverse work environment with outstanding career development opportunities. During this internship, you'll gain hands-on experience and work closely with AMD leaders, receive one-on-one mentorship, and participate in networking events.",
+    "location": "Markham, ON, Canada",
+    "employmentType": "Full-time",
+    "workType": "Onsite/Hybrid",
+    "internType": "Summer 2025",
+    "jobLink": "https://careers.amd.com/careers-home/jobs/54041?lang=en-us&iis=Job%20Board&iisn=Linkedin",
+    "linkedin": "https://www.linkedin.com/company/amd/life/multivoicesatamd/",
+    "skillsRequired": [
+      "C++", "Computer Engineering", "Software Engineering Concepts", "C/C++ Programming", 
+      "Python", "Windows PowerShell", "Linux Shell Scripting", "Java", "JavaScript", "UML", 
+      "UNIX/Linux OS", "MySQL", "PostgreSQL", "MongoDB", "Azure", "Django", "Rails", 
+      "Spring Boot", "HTML", "XML", "XSL", "Defect Tracking", "Testing", "Debugging", 
+      "Git", "Github", "Perforce", "OAuth", "SSL", "TLS", "PC/CPU Architecture", 
+      "Embedded Systems", "Microcontrollers"
+    ],
+    "basicQualifications": [
+      "Currently enrolled in a University program in Computer Engineering, Electrical Engineering, Computer Science, or a related field",
+      "Experience or knowledge in software engineering concepts, C/C++ programming, and scripting languages such as Python, Windows PowerShell, Linux shell scripts",
+      "Understanding of UNIX/Linux OS and databases such as MySQL, PostgreSQL, or MongoDB",
+      "Familiarity with cloud computing platforms (e.g., Azure) and web development frameworks (e.g., Django, Rails, Spring Boot)",
+      "Knowledge of markup languages like HTML, XML, XSL, and security technologies (OAuth, SSL, TLS)",
+      "Experience with version control (Git, Github, Perforce) and debugging methodologies"
+    ],  
+    "preferredQualifications": [
+      "Previous co-op or internship experience",
+      "Knowledge of PC/CPU architecture, embedded systems, and microcontrollers",
+      "Familiarity with defect tracking, testing, and debugging tools",
+      "Understanding of software security technologies and CI/CD pipelines"
+    ],
+    "keyResponsibilities": [
+      "Collaborate closely with software engineers to build and maintain AMD’s software applications",
+      "Gain exposure to the full software creation process, from design and build to testing and deployment",
+      "Build scripts to automate parts of the software development process",
+      "Learn debugging methodologies to investigate root causes of software issues",
+      "Support technical documentation and reporting for specific projects"
+    ],
+    "additionalInfo": "AMD is an equal opportunity employer that welcomes and considers all applicants without discrimination. Accommodations are provided for applicants with disabilities during all recruitment and selection stages."
+  },
+
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C4E0BAQEEcufOwTR8dA/company-logo_100_100/company-logo_100_100/0/1633723162871/seaspan_ulc_logo?e=1738800000&v=beta&t=NBRXXq6pKH5geEsxJHezkeC4RQzB75fpSJksLqR7QG8",
+    "companyName": "Seaspan ULC",
+    "title": "Intern, Outfit Engineering (4 Months)",
+    "description": "As part of the National Shipbuilding Strategy, Seaspan ULC is responsible for constructing vessels for the Canadian Coast Guard and Navy. This internship will immerse you in naval architecture and shipbuilding, working on vessel schematics, steel outfitting, and joinery systems.",
+    "location": "North Vancouver, BC, Canada",
+    "employmentType": "Internship",
+    "workType": "On-site",
+    "internType": "January 2025",
+    "jobLink": "https://hckz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7039?utm_medium=jobshare",
+    "linkedin": "https://www.linkedin.com/company/seaspan-ulc/",
+    "skillsRequired": ["Naval Architecture", "Mechanical Engineering", "CAD/CAM", "AutoCAD", "Technical Documentation"],
+    "basicQualifications": [
+      "Currently enrolled in Naval Architecture, Marine Engineering, Mechanical Engineering, or a related field",
+      "Proficiency in CAD software, including AutoCAD",
+      "Ability to read and interpret technical specifications and drawings"
+    ],
+    "preferredQualifications": [
+      "Strong organizational skills and technical proficiency",
+      "Interest in heavy industrial settings and shipbuilding"
+    ],
+    "additionalInfo": "Seaspan ULC is an inclusive employer. All qualified individuals are encouraged to apply, and accommodations are available throughout the hiring process for those who require them."
+  }
+];
 
 async function main() {
   for (const company of companies) {
     await prisma.companies.create({
       data: company,
+    });
+  }
+  for (const job of jobs) {
+    await prisma.jobs.create({
+      data: job,
     });
   }
 }
