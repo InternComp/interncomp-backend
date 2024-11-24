@@ -147,6 +147,7 @@ app.get('/companies',async(req,res) =>{
         res.status(200).json(companies);
     }
     catch (error){
+        console.log(error)
         res.status(500).json({error: "Unable to fetch companies"});
     }
 });
