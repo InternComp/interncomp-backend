@@ -74,6 +74,7 @@ app.get('/user/:id',async(req,res) =>{
     //teh database 
 });
 
+
 app.post('/user/:id',async(req,res)=>{
     const {id} =req.params; //api request parameter which is user id in our case
     const{name, program, university,location,institution,gender}=req.body;
@@ -158,12 +159,11 @@ app.post('/jobs', async (req, res) => {
     const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo} = req.body;
   
     try {
-        const newJob = await prisma.job.create({
+        const newJob = await prisma.jobs.create({
             data: {
                 companyImage,
                 companyName,
                 title,
-                careerPages,
                 description,
                 location,
                 employmentType,
@@ -263,7 +263,7 @@ app.delete('/jobs/:id', async (req, res) => {
     const { id } = req.params;
   
     try {
-        await prisma.job.delete({
+        await prisma.jobs.delete({
         where: { id }
       });
       res.status(204).send();
@@ -272,6 +272,19 @@ app.delete('/jobs/:id', async (req, res) => {
       res.status(500).json({ error: 'Failed to delete job' });
     }
 });
+
+app.get('/reviews',async(req,res) =>{
+    try{
+        const reviews = await prisma.reviews.findMany();
+        res.status(200).json(reviews);
+    }
+    catch (error){
+        console.log(error)
+        res.status(500).json({error: "Unable to fetch companies"});
+    }
+});
+
+
   
 
 

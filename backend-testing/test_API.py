@@ -14,26 +14,43 @@ def session():
 #pytest will automatically detect base_url & session to be a function
 #we dont need to define main() for it to run
 def test_getcompanies_endpoint(base_url,session):
-    breakpoint()
     res=session.get(f"{base_url}/companies")
 
     # print(res.json())
     assert res.status_code==200
     assert isinstance(res.json(),list)
 
-# def test_getjobs_endpoint(base_url,session):
+def test_getcompaniesby_id_endpoint(base_url,session):
+    res=session.get(f"{base_url}/companies/0e520ae7-ce28-4174-bf91-5b408e055b66")
+    assert res.status_code==200
+    assert res.json()
 
-#     res=session.get(f"{base_url}/jobs")
-#     # print(res.json())
-#     assert res.status_code==200
-#     assert isinstance(res.json(),list)
 
-# def test_getusers_endpoint(base_url,session):
+def test_getjobs_endpoint(base_url,session):
 
-#     res=session.get(f"{base_url}/users")
-#     # print(res.json())
-#     assert res.status_code==200
-#     assert isinstance(res.json(),list)
+    res=session.get(f"{base_url}/jobs")
+    # print(res.json())
+    assert res.status_code==200
+    assert isinstance(res.json(),list)
+
+def test_getjobsby_id_endpoint(base_url,session):
+    res=session.get(f"{base_url}/jobs/51c63dec-65a7-4f00-b2fa-ff00991f1310")
+    assert res.status_code==200
+    assert res.json()
+
+
+def test_getusersby_id_endpoint(base_url,session):
+    res=session.get(f"{base_url}/user/112108579048235041853")
+    assert res.status_code==200
+    assert res.json()
+
+def test_getreviews_endpoint(base_url,session):
+
+    res=session.get(f"{base_url}/Reviews")
+    # print(res.json())
+    assert res.status_code==200
+    assert isinstance(res.json(),list)
+
 
 # def test_postcompanies_endpoint(base_url, session):
 #     data = {
@@ -64,39 +81,134 @@ def test_getcompanies_endpoint(base_url,session):
 #     for key in response_data.keys():
 #         assert response_data[key] == data[key]
 
-# def test_postjobs_endpoint(base_url, session):
-#     data = {
-#     "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_100_100/company-logo_100_100/0/1630640869849/amazon_logo?e=1738800000&v=beta&t=MRR139bOgOiLg5yCuJalxOQW4m2wzl4Jo6dCSXPvDgg",
-#     "companyName": "Amazon",
-#     "title": "Software Development Engineer Co-op and Intern",
-#     "description": "Are you inspired by invention? Is problem solving through teamwork in your DNA? Do you like the idea of seeing how your work impacts the bigger picture? Answer yes to any of these and you’ll fit right in here at Amazon Robotics. We are a smart team of doers who work passionately to apply cutting edge advances in robotics and software to solve real-world challenges that will transform our customers’ experiences. We invent new improvements every day. We are Amazon Robotics and we will give you the tools and support you need to invent with us in ways that are rewarding, fulfilling, and fun. Amazon Robotics, a wholly owned subsidiary of Amazon.com, empowers a smarter, faster, more consistent customer experience through automation. Amazon Robotics automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands. Amazon Robotics has a dedicated focus on research and development to continuously explore new opportunities to extend its product lines into new areas.",
-#     "location": "Toronto, ON, Canada",
-#     "employmentType": "Internship",
-#     "workType": "Full-time",
-#     "internType": "Winter 2025",
-#     "jobLink": "https://www.amazon.jobs/en/jobs/2750005/amazon-robotics-software-development-engineer-co-op-and-intern-2025-toronto?cmpid=SPLICX0248M&ss=paid&utm_campaign=cxro&utm_content=job_posting&utm_medium=social_media&utm_source=linkedin.com",
-#     "linkedin": "https://www.linkedin.com/company/amazon/",
-#     "skillsRequired": ["Python", "C++", "Software Development", "Robotics", "Object-Oriented Design", "Algorithms", "Data Structures"],
-#     "basicQualifications": [
-#       "Knowledge of computer science fundamentals such as object-oriented design, operating systems, algorithms, data structures, and complexity analysis",
-#       "Experience with at least one modern programming language such as Python, C++, or Java",
-#       "Strong problem-solving skills and a passion for innovation"
-#     ],
-#     "preferredQualifications": [
-#       "Experience with distributed systems and relational databases",
-#       "Knowledge of C/C++, Python, or Java",
-#       "Familiarity with robotics, machine learning, or data analysis"
-#     ],
-#     "additionalInfo": "Amazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate based on race, national origin, gender, gender identity, sexual orientation, disability, age, or other legally protected status."
+def test_postjobs_endpoint(base_url, session):
+    data = {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_100_100/company-logo_100_100/0/1630640869849/amazon_logo?e=1738800000&v=beta&t=MRR139bOgOiLg5yCuJalxOQW4m2wzl4Jo6dCSXPvDgg",
+    "companyName": "Amazon",
+    "title": "Software Development Engineer Co-op and Intern",
+    "description": "Are you inspired by invention? Is problem solving through teamwork in your DNA? Do you like the idea of seeing how your work impacts the bigger picture? Answer yes to any of these and you’ll fit right in here at Amazon Robotics. We are a smart team of doers who work passionately to apply cutting edge advances in robotics and software to solve real-world challenges that will transform our customers’ experiences. We invent new improvements every day. We are Amazon Robotics and we will give you the tools and support you need to invent with us in ways that are rewarding, fulfilling, and fun. Amazon Robotics, a wholly owned subsidiary of Amazon.com, empowers a smarter, faster, more consistent customer experience through automation. Amazon Robotics automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands. Amazon Robotics has a dedicated focus on research and development to continuously explore new opportunities to extend its product lines into new areas.",
+    "location": "Toronto, ON, Canada",
+    "employmentType": "Internship",
+    "workType": "Full-time",
+    "internType": "Winter 2025",
+    "jobLink": "https://www.amazon.jobs/en/jobs/2750005/amazon-robotics-software-development-engineer-co-op-and-intern-2025-toronto?cmpid=SPLICX0248M&ss=paid&utm_campaign=cxro&utm_content=job_posting&utm_medium=social_media&utm_source=linkedin.com",
+    "linkedin": "https://www.linkedin.com/company/amazon/",
+    "skillsRequired": ["Python", "C++", "Software Development", "Robotics", "Object-Oriented Design", "Algorithms", "Data Structures"],
+    "basicQualifications": [
+      "Knowledge of computer science fundamentals such as object-oriented design, operating systems, algorithms, data structures, and complexity analysis",
+      "Experience with at least one modern programming language such as Python, C++, or Java",
+      "Strong problem-solving skills and a passion for innovation"
+    ],
+    "preferredQualifications": [
+      "Experience with distributed systems and relational databases",
+      "Knowledge of C/C++, Python, or Java",
+      "Familiarity with robotics, machine learning, or data analysis"
+    ],
+    "additionalInfo": "Amazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate based on race, national origin, gender, gender identity, sexual orientation, disability, age, or other legally protected status."
+    }
+    res = session.post(f"{base_url}/jobs", json=data)
+    
+    # Assert that the status code is 201 (Created) as a new resource is created
+    assert res.status_code == 201
+    
+    # Assert that the response contains the expected data
+    response_data = res.json()
+    assert isinstance(response_data, dict)
+    assert "id" in response_data  # Assuming that the response includes the newly created company's ID
+    assert response_data["companyImage"] == data["companyImage"]
+
+def test_postuserbyid_endpoint(base_url, session):
+    
+    user_id = "112108579048235041853"  
+    update_payload = {
+        "name": "Aaron Oates",
+        "email": "aaronoates2003@gmail.com"
+    }
+
+    # Step 2: Send the POST request to update the user
+    res = session.post(f"{base_url}/user/{user_id}", json=update_payload)
+
+    # Step 3: Assertions to verify the response
+    assert res.status_code == 200  # Expecting a successful update
+    response_data = res.json()
+    
+    # Ensure the response contains the updated user data
+    assert "data" in response_data
+    updated_user = response_data["data"]
+    assert updated_user["id"] == user_id
+    assert updated_user["name"] == update_payload["name"]
+    assert updated_user["email"] == update_payload["email"]
+
+# def test_postreview_endpoint(base_url, session):
+
+#     company_id = "0e520ae7-ce28-4174-bf91-5b408e055b66"
+#     review_payload = {
+#         "reviewerId": "112108579048235041853",  # Replace with a valid reviewer ID
+#         "companyId": company_id,
+#         "review_text": "Great company with excellent work culture.",
+#         "rating": "FIVE"
 #     }
-#     res = session.post(f"{base_url}/jobs", json=data)
-    
-#     # Assert that the status code is 201 (Created) as a new resource is created
-#     assert res.status_code == 201
-    
-#     # Assert that the response contains the expected data
+
+#     # Step 2: Send the POST request to add a review
+#     res = session.post(f"{base_url}/companies/{company_id}/reviews", json=review_payload)
+
+#     # Step 3: Assertions to verify the response
+#     assert res.status_code == 200  # Expecting a successful review creation
 #     response_data = res.json()
-#     assert isinstance(response_data, dict)
-#     assert "id" in response_data  # Assuming that the response includes the newly created company's ID
-#     for key in response_data.keys():
-#         assert response_data[key] == data[key]
+
+#     # Ensure the response contains the new review's details
+#     assert response_data["reviewerId"] == review_payload["reviewerId"]
+#     assert response_data["companyId"] == review_payload["companyId"]
+#     assert response_data["review"] == review_payload["review_text"]
+#     assert response_data["rating"] == review_payload["rating"]
+
+def test_putjobs_endpoint(base_url, session):
+    data = {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_100_100/company-logo_100_100/0/1630640869849/amazon_logo?e=1738800000&v=beta&t=MRR139bOgOiLg5yCuJalxOQW4m2wzl4Jo6dCSXPvDgg",
+    "companyName": "Amazon Updated",
+    "title": "Software Development Engineer Co-op and Intern",
+    "description": "Are you inspired by invention? Is problem solving through teamwork in your DNA? Do you like the idea of seeing how your work impacts the bigger picture? Answer yes to any of these and you’ll fit right in here at Amazon Robotics. We are a smart team of doers who work passionately to apply cutting edge advances in robotics and software to solve real-world challenges that will transform our customers’ experiences. We invent new improvements every day. We are Amazon Robotics and we will give you the tools and support you need to invent with us in ways that are rewarding, fulfilling, and fun. Amazon Robotics, a wholly owned subsidiary of Amazon.com, empowers a smarter, faster, more consistent customer experience through automation. Amazon Robotics automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands. Amazon Robotics has a dedicated focus on research and development to continuously explore new opportunities to extend its product lines into new areas.",
+    "location": "Toronto, ON, Canada",
+    "employmentType": "Internship",
+    "workType": "Full-time",
+    "internType": "Winter 2025",
+    "jobLink": "https://www.amazon.jobs/en/jobs/2750005/amazon-robotics-software-development-engineer-co-op-and-intern-2025-toronto?cmpid=SPLICX0248M&ss=paid&utm_campaign=cxro&utm_content=job_posting&utm_medium=social_media&utm_source=linkedin.com",
+    "linkedin": "https://www.linkedin.com/company/amazon/",
+    "skillsRequired": ["Python", "C++", "Software Development", "Robotics", "Object-Oriented Design", "Algorithms", "Data Structures"],
+    "basicQualifications": [
+      "Knowledge of computer science fundamentals such as object-oriented design, operating systems, algorithms, data structures, and complexity analysis",
+      "Experience with at least one modern programming language such as Python, C++, or Java",
+      "Strong problem-solving skills and a passion for innovation"
+    ],
+    "preferredQualifications": [
+      "Experience with distributed systems and relational databases",
+      "Knowledge of C/C++, Python, or Java",
+      "Familiarity with robotics, machine learning, or data analysis"
+    ],
+    "additionalInfo": "Amazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate based on race, national origin, gender, gender identity, sexual orientation, disability, age, or other legally protected status."
+    }
+    res = session.post(f"{base_url}/jobs", json=data)
+    
+    # Assert that the status code is 201 (Created) as a new resource is created
+    assert res.status_code == 201
+    
+    # Assert that the response contains the expected data
+    response_data = res.json()
+    assert isinstance(response_data, dict)
+    assert "id" in response_data  # Assuming that the response includes the newly created company's ID
+    assert response_data["companyImage"] == data["companyImage"]
+
+
+def test_delete_job_endpoint(base_url, session):
+    # Step 1: Define the job ID to delete
+    job_id = "223bc1d1-a763-4303-bbdf-f365877594cb"  # Replace with a valid job ID present in the test database
+
+    # Step 2: Send the DELETE request
+    res = session.delete(f"{base_url}/jobs/{job_id}")
+
+    # Step 3: Assertions to verify the response
+    assert res.status_code == 204  # Expecting a "No Content" response
+
+    # Step 4 (Optional): Verify that the job no longer exists
+    check_res = session.get(f"{base_url}/jobs/{job_id}")
+    assert check_res.status_code == 404  # Expecting a "Not Found" response for a deleted job
