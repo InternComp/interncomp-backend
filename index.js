@@ -31,17 +31,19 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'] 
 }));
 
-
-app.get ('/', (req, res) => {
-    res.sendFile ('index.html');
-});
-
 app.use(session({
     secret:'keyboard cat',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
   }));
+
+
+app.get ('/', (req, res) => {
+    res.sendFile ('index.html');
+});
+
+
 
 app.use (passport.initialize ());
 app.use(passport.session());
@@ -117,10 +119,11 @@ app.post('/companies/:id/reviews', async (req, res) => {
             data:{
                 reviewerId: String(reviewerId),
                 companyId: companyId,
-                review: review_text,
+                review: (review_text),
                 rating: rating
             }
         })
+        res.status(200).send("review received");
 
         //I dont think we need to send the newReview back a reload should update it? prompt a reload maybe?
         //adding a review with a companyID should automatically associate it to the company in the database
@@ -223,6 +226,28 @@ app.get('/jobs/:id', async (req, res) => {
     }
 });
   
+// app.get('/user/logout', (req,res) => {
+
+//     req.logout()
+//     req.session.destroy()
+//     res.redirect('/')
+// })
+// Logout route
+app.get('/logout', (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            console.error('Error during logout:', err);
+            return res.redirect('/error'); 
+        }
+        req.session.destroy((err) => { 
+            if (err) {
+                console.error('Error destroying session:', err);
+            }
+        });
+        res.sendStatus(200);
+    });
+});
+
   // Update a Job by ID
 app.put('/jobs/:id', async (req, res) => {
     const { id } = req.params;
