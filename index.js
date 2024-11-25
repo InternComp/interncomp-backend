@@ -118,7 +118,8 @@ app.post('/companies/:id/reviews', async (req, res) => {
                 reviewerId: String(reviewerId),
                 companyId: companyId,
                 review: review_text,
-                rating: rating
+                rating: rating,
+                createdAt: new Date()
             }
         })
 

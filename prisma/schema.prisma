@@ -33,7 +33,8 @@ model Reviews {
   companyId  String
   company    Companies      @relation(fields: [companyId], references: [id])
   review     String
-  rating     limited_rating
+  rating     Int
+  createdAt                DateTime   @default(now())
 }
 
 model Salaries {
@@ -80,4 +81,5 @@ model Jobs {
   preferredQualifications  String[]
   keyResponsibilities      String[]
   additionalInfo           String
+  postedDate               DateTime   @default(now()) // Automatically set to current date
 }
