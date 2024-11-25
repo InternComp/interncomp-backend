@@ -78,4 +78,5 @@ model Jobs {
   preferredQualifications  String[]
   keyResponsibilities      String[]
   additionalInfo           String
+  postedDate               DateTime   @default(now()) // Automatically set to current date
 }

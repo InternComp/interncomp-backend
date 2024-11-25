@@ -206,12 +206,8 @@ const jobs = [
     "jobLink": "https://careers.amd.com/careers-home/jobs/54041?lang=en-us&iis=Job%20Board&iisn=Linkedin",
     "linkedin": "https://www.linkedin.com/company/amd/life/multivoicesatamd/",
     "skillsRequired": [
-      "C++", "Computer Engineering", "Software Engineering Concepts", "C/C++ Programming", 
-      "Python", "Windows PowerShell", "Linux Shell Scripting", "Java", "JavaScript", "UML", 
-      "UNIX/Linux OS", "MySQL", "PostgreSQL", "MongoDB", "Azure", "Django", "Rails", 
-      "Spring Boot", "HTML", "XML", "XSL", "Defect Tracking", "Testing", "Debugging", 
-      "Git", "Github", "Perforce", "OAuth", "SSL", "TLS", "PC/CPU Architecture", 
-      "Embedded Systems", "Microcontrollers"
+      "C++", "Computer Engineering", "C/C++ Programming", "Java", "JavaScript", "UML", 
+      "UNIX/Linux OS", "MySQL", "PostgreSQL", "MongoDB", "Azure", "Django"
     ],
     "basicQualifications": [
       "Currently enrolled in a University program in Computer Engineering, Electrical Engineering, Computer Science, or a related field",
