@@ -31,19 +31,17 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'] 
 }));
 
+
+app.get ('/', (req, res) => {
+    res.sendFile ('index.html');
+});
+
 app.use(session({
     secret:'keyboard cat',
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false }
   }));
-
-
-app.get ('/', (req, res) => {
-    res.sendFile ('index.html');
-});
-
-
 
 app.use (passport.initialize ());
 app.use(passport.session());
@@ -71,6 +69,7 @@ app.get('/user/:id',async(req,res) =>{
     const {id} =req.params; //api request parameter which is user id in our case
     const user=await prisma.user.findUnique({
         where: {id:id}
+
     });
     if (user){res.json(user)}; //send user object to the front end where front end can decode the user info from 
     //the database 
@@ -119,8 +118,9 @@ app.post('/companies/:id/reviews', async (req, res) => {
             data:{
                 reviewerId: String(reviewerId),
                 companyId: companyId,
-                review: (review_text),
-                rating: rating
+                review: review_text,
+                rating: rating,
+                createdAt: new Date()
             }
         })
         res.status(200).send("review received");
@@ -138,7 +138,7 @@ app.get('/companies/:id',async(req,res) =>{
     const {id} =req.params; //api request parameter which is company id in our case
     const companies=await prisma.companies.findUnique({
         where: {id:id},
-        include: {reviews: true}
+        include: {reviews: true, salaries:true }
     });
     if (companies){res.json(companies)}; //send company object to the front end where front end can decode the user info from 
     // the database 
@@ -225,7 +225,7 @@ app.get('/jobs/:id', async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch job' });
     }
 });
-  
+
 // app.get('/user/logout', (req,res) => {
 
 //     req.logout()
@@ -247,7 +247,7 @@ app.get('/logout', (req, res) => {
         res.sendStatus(200);
     });
 });
-
+  
   // Update a Job by ID
 app.put('/jobs/:id', async (req, res) => {
     const { id } = req.params;
