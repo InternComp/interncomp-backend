@@ -81,20 +81,32 @@ app.post('/user/:id',async(req,res)=>{
     const user=await prisma.user.findUnique({
         where: {id:id}
     });
-    if(user){
-        const setUser=await prisma.user.update({
+    try{
+        const setUser=await prisma.user.upsert({
             where: {id:id},
-            data:{
+            update:{
                 name, 
                 program, 
                 university,
                 location,
                 institution,
-                gender         
+                gender,   
+            },
+            create:{
+                name, 
+                program, 
+                university,
+                location,
+                institution,
+                gender,
             }
         });
         console.log(setUser)
-        res.json({ data: setUser })
+        res.json({ data: setUser }).send(200)
+    }
+    catch(e){
+        console.log(e)
+        res.sendStatus(500);
     }
 
 }
@@ -156,36 +168,36 @@ app.get('/companies',async(req,res) =>{
 
 
 // Create a new Job
-app.post('/jobs', async (req, res) => {
-    const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo} = req.body;
+// app.post('/jobs', async (req, res) => {
+//     const { companyImage, companyName, title, description, location, employmentType, workType, internType, jobLink, linkedin, skillsRequired, basicQualifications, preferredQualifications, keyResponsibilities, additionalInfo} = req.body;
   
-    try {
-        const newJob = await prisma.job.create({
-            data: {
-                companyImage,
-                companyName,
-                title,
-                careerPages,
-                description,
-                location,
-                employmentType,
-                workType,
-                internType,
-                jobLink,
-                linkedin,
-                skillsRequired,
-                basicQualifications,
-                preferredQualifications,
-                keyResponsibilities,
-                additionalInfo
-            },
-        });
-        res.status(201).json(newJob);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ error: 'Failed to create job' });
-    }
-});
+//     try {
+//         const newJob = await prisma.job.create({
+//             data: {
+//                 companyImage,
+//                 companyName,
+//                 title,
+//                 careerPages,
+//                 description,
+//                 location,
+//                 employmentType,
+//                 workType,
+//                 internType,
+//                 jobLink,
+//                 linkedin,
+//                 skillsRequired,
+//                 basicQualifications,
+//                 preferredQualifications,
+//                 keyResponsibilities,
+//                 additionalInfo
+//             },
+//         });
+//         res.status(201).json(newJob);
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({ error: 'Failed to create job' });
+//     }
+// });
   
   // Get all Jobs
 app.get('/jobs', async (req, res) => {
@@ -283,19 +295,19 @@ app.put('/jobs/:id', async (req, res) => {
 });
   
   // Delete a Job by ID
-app.delete('/jobs/:id', async (req, res) => {
-    const { id } = req.params;
+// app.delete('/jobs/:id', async (req, res) => {
+//     const { id } = req.params;
   
-    try {
-        await prisma.job.delete({
-        where: { id }
-      });
-      res.status(204).send();
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Failed to delete job' });
-    }
-});
+//     try {
+//         await prisma.job.delete({
+//         where: { id }
+//       });
+//       res.status(204).send();
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ error: 'Failed to delete job' });
+//     }
+// });
   
 
 
