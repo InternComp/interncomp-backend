@@ -14,12 +14,54 @@ const companies = [
     "primaryIndustry": 'Financial Technology (FinTech)',
     "companySize": 'Large',
     "founded": 2003,
-    "recruiterEmails": ['xxx'],
+    "recruiterEmails": ['recruiter@verafin.com'],
     "image": 'https://media.licdn.com/dms/image/v2/D4E0BAQGG8SZ7WgOpLw/company-logo_200_200/company-logo_200_200/0/1719256890099/verafin_logo?e=1737590400&v=beta&t=8uY7TXutiRePKIKD1qpYFPyGYBffIXY6jbKDE8pt4Mc',
     "banner":"https://media.licdn.com/dms/image/v2/D4E3DAQH4sa-w44VW5A/image-scale_191_1128/image-scale_191_1128/0/1719332162782/verafin_cover?e=2147483647&v=beta&t=UIH0vq3DAC4JNnIlIRZRkYnezuXxljkHepazohIK8U0",
     "linkedin": 'https://linkedin.com/company/verafin',
     "careerPages": 'https://verafin.com/careers',
-    "salaryInfo": 'Competitive salaries with stock options and performance bonuses.'
+    "salaryInfo": 'Competitive salaries with stock options and performance bonuses.',
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'Nice benefits and vibrant startup culture',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '20',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '23',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '29',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '32',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '35',
+        },
+      ],
+    },
   },
   {
     "name": "CoLab",
@@ -30,12 +72,54 @@ const companies = [
     "primaryIndustry": 'Software (Engineering Collaboration Tools)',
     "companySize": 'Medium',
     "founded": 2017,
-    "recruiterEmails": ['xxx'],
+    "recruiterEmails": ['recruiter@colabsoftware.com'],
     "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHbSGuaNdonfg/company-logo_200_200/company-logo_200_200/0/1632407145065/colabsoftware_logo?e=1737590400&v=beta&t=o07J3CRNXEftN3E6LyEl4583ygGhpPr5hNcVGTUaTxU',
     "banner":"https://media.licdn.com/dms/image/v2/D563DAQEDK-0ICPj2OA/image-scale_191_1128/image-scale_191_1128/0/1715622263542/colabsoftware_cover?e=2147483647&v=beta&t=uRUC4YF6RAOfwarpkYQ08GEB-aUdMMkdkLnVajx3cuc",
     "linkedin": 'https://linkedin.com/company/colabsoftware',
     "careerPages": 'https://colabsoftware.com/careers',
-    "salaryInfo": 'Competitive salaries with performance-based incentives and stock options.'
+    "salaryInfo": 'Competitive salaries with performance-based incentives and stock options.',
+    "reviews": {
+      create: [
+        {
+          rating: 4,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+        {
+          rating: 3,
+          review: 'User-friendly interface and intuitive design.',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '20',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '23',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '29',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '32',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '35',
+        },
+      ],
+    },
   },
   {
     "name": "Amazon",
@@ -46,12 +130,59 @@ const companies = [
     "primaryIndustry": 'E-commerce, Cloud Computing',
     "companySize": 'Large',
     "founded": 1994,
-    "recruiterEmails": ['xxx'],
+    "recruiterEmails": ['recruiter@amazon.com'],
     "image": 'https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_200_200/company-logo_200_200/0/1630640869849/amazon_logo?e=1737590400&v=beta&t=-DCmbQxK09G0KBpSuXP_y9r-b3FV1XGhJb6UgwpoSeI',
     "banner":"https://media.licdn.com/dms/image/v2/D4D3DAQGri_YWxYb-GQ/image-scale_191_1128/image-scale_191_1128/0/1681945878609/amazon_cover?e=2147483647&v=beta&t=Z64cxCag2dlANbtatwTuJEjbK0BV1sz0SpvevIa79Io",
     "linkedin": 'https://www.linkedin.com/company/amazon',
     "careerPages": 'https://www.amazon.jobs',
-    "salaryInfo": 'Competitive salaries with stock options and annual performance bonuses.'
+    "salaryInfo": 'Competitive salaries with stock options and annual performance bonuses.',
+    "reviews": {
+      create: [
+        {
+          rating: 3,
+          review: 'Strong leadership and clear company vision.',
+          reviewerId: '1',
+        },
+        {
+          rating: 5,
+          review: 'Opportunities for professional growth and development.',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '20',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '23',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '23',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '25',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '25',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '26',
+        },
+      ],
+    },
   },
   {
     "name": "Tesla",
@@ -62,12 +193,54 @@ const companies = [
     "primaryIndustry": 'Electric Vehicles, Clean Energy',
     "companySize": 'Large',
     "founded": 2003,
-    "recruiterEmails": ['xxx'],
+    "recruiterEmails": ['recruiter@tesla.com'],
     "image": 'https://media.licdn.com/dms/image/v2/C4D0BAQHUcu98SZ2TVw/company-logo_200_200/company-logo_200_200/0/1630576446368/tesla_motors_logo?e=1737590400&v=beta&t=dV6plT0RdNgMgUOHYLkuopuUxGZ99TFtoWP7lbvf5ec',
-    "banner": 'https://media.licdn.com/dms/image/v2/C561BAQFqQXNCkzg_Uw/company-background_10000/company-background_10000/0/1635791699664/tesla_motors_cover?e=1730142000&v=beta&t=BPHcRW41yyWJJ9yfaD2QDYUrB1TCdmdNNzpEoAdHqa4',
+    "banner": 'https://media.licdn.com/dms/image/v2/D563DAQE2eptnL2TV6g/image-scale_191_1128/image-scale_191_1128/0/1692911586399/teslacharging_cover?e=2147483647&v=beta&t=vXsQkebseN4k3Ya8RvzBs46-plEXX84xLK5a9tEoLnU',
     "linkedin": 'https://www.linkedin.com/company/tesla-motors',
     "careerPages": 'https://www.tesla.com/careers',
-    "salaryInfo": 'Competitive salaries, stock options, and performance-based bonuses.'
+    "salaryInfo": 'Competitive salaries, stock options, and performance-based bonuses.',
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'Innovative products and cutting-edge technology.',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '21',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '22',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '26',
+        },
+      ],
+    },
   },
   {
     "name": "Cenovus Energy",
@@ -78,12 +251,54 @@ const companies = [
     "primaryIndustry": 'Oil and Gas',
     "companySize": 'Large',
     "founded": 2009,
-    "recruiterEmails": ['xxx'],
+    "recruiterEmails": ['recruiter@cenovus.com'],
     "image": 'https://media.licdn.com/dms/image/v2/C560BAQF0LWhqSCovZg/company-logo_200_200/company-logo_200_200/0/1630638463303/cenovus_energy_logo?e=1737590400&v=beta&t=gxJECsbRWtmtb-mUGG1wH0z9fRMPcn9WHCWOOItQGpk',
     "banner":"https://media.licdn.com/dms/image/v2/D563DAQHSGe-4Z-ZrQQ/image-scale_191_1128/image-scale_191_1128/0/1720472663613/cenovus_energy_cover?e=2147483647&v=beta&t=FfURjepFWNEjJPwEXlxX5tvTfQ7daZ4aNf1leqOFmbY",
     "linkedin": 'https://www.linkedin.com/company/cenovus-energy',
     "careerPages": 'https://www.cenovus.com/careers',
-    "salaryInfo": 'Competitive salary packages with bonuses based on performance.'
+    "salaryInfo": 'Competitive salary packages with bonuses based on performance.',
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'Innovative products and cutting-edge technology.',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '20',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '21',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '22',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '22',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '23',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '23',
+        },
+      ],
+    },
   },
   {
     "name":"Nokia",
@@ -94,12 +309,54 @@ const companies = [
     "primaryIndustry": "Telecommunications and Technology",
     "companySize": "Large",
     "founded": 1865,
-    "recruiterEmails": ["xxx"],
+    "recruiterEmails": ['recruiter@nokia.com'],
     "image": "https://media.licdn.com/dms/image/v2/C4E0BAQGL8hpduEqGKQ/company-logo_200_200/company-logo_200_200/0/1677420439270/nokia_logo?e=1737590400&v=beta&t=n8ZHX34Snn2k6jOCpSLFKt59trCv4XKY0Y6V5QDjA_0",
     "banner":"https://media.licdn.com/dms/image/v2/D4E3DAQGPXO9cOgbFNA/image-scale_191_1128/image-scale_191_1128/0/1677420489891/nokia_cover?e=2147483647&v=beta&t=xAATi5bTZV4d0oQ6PV-WqFkZ9Khg2KQHfgIgiot5ipY",
     "linkedin": "https://linkedin.com/company/nokia",
     "careerPages": "https://www.nokia.com/careers",
-    "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."
+    "salaryInfo": "Competitive salaries with stock options and bonuses based on performance.",
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'was an enriching experience. I gained hands-on experience in tech, and the team was always ready to help me improve.!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'was an amazing place to intern. The company culture is energetic',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '27',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '28',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '30',
+        },
+      ],
+    },
   },
   {
     "name":"BlackBerry",
@@ -110,12 +367,54 @@ const companies = [
     "primaryIndustry": "Cybersecurity and Software",
     "companySize": "Medium",
     "founded": 1984,
-    "recruiterEmails": ["xxx"],
+    "recruiterEmails": ['recruiter@blackberry.com'],
     "image": "https://media.licdn.com/dms/image/v2/C560BAQEHnvbvfKCsDg/company-logo_100_100/company-logo_100_100/0/1630575741184/blackberry_logo?e=1737590400&v=beta&t=CneuAnnBjDnWYgw4uFpyKmO1940lvw6DdYgGwFID01o",
     "banner":"https://media.licdn.com/dms/image/v2/D563DAQGjOZmqfP6s-g/image-scale_191_1128/image-scale_191_1128/0/1705956638033/blackberry_cover?e=2147483647&v=beta&t=xxBg_NvSBCsfTRTUoGQaaEoLUZ_-NQpPcVi7A35CXzU",
     "linkedin": "https://www.linkedin.com/company/blackberry",
     "careerPages": "https://www.blackberry.com/careers",
-    "salaryInfo": "Competitive salaries with performance-based bonuses and stock options."
+    "salaryInfo": "Competitive salaries with performance-based bonuses and stock options.",
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'was an enriching experience. I gained hands-on experience in tech, and the team was always ready to help me improve.!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'was an amazing place to intern. The company culture is energetic',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '27',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '28',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '30',
+        },
+      ],
+    },
   },
   {
     "name":"Seaspan",
@@ -126,12 +425,54 @@ const companies = [
     "primaryIndustry": "Maritime Shipping and Logistics",
     "companySize": "Large",
     "founded": 2000,
-    "recruiterEmails": ["xxx"],
+    "recruiterEmails": ['recruiter@seaspan.com'],
     "image": "https://media.licdn.com/dms/image/v2/C4E0BAQEEcufOwTR8dA/company-logo_200_200/company-logo_200_200/0/1633723162870/seaspan_ulc_logo?e=1737590400&v=beta&t=ljXwkof8j_aw8ml52W1TLDVMipHYXU8VuVnFV_Nocuk",
     "banner":"https://media.licdn.com/dms/image/v2/D563DAQFmx8LMTnTg9Q/image-scale_191_1128/image-scale_191_1128/0/1672956967990/seaspan_ulc_cover?e=2147483647&v=beta&t=qemMr6GuIGfT7-N21tBLj2pw8yZ9uUuF2yJgs13fyo4",
     "linkedin": "https://www.linkedin.com/company/seaspan-corporation",
     "careerPages": "https://www.seaspancorp.com/careers",
-    "salaryInfo": "Competitive salaries with performance-based bonuses."
+    "salaryInfo": "Competitive salaries with performance-based bonuses.",
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'was an enriching experience. I gained hands-on experience in tech, and the team was always ready to help me improve.!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'was an amazing place to intern. The company culture is energetic',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '27',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '28',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '30',
+        },
+      ],
+    },
   },
   {
     "name":"Bell",
@@ -142,16 +483,57 @@ const companies = [
     "primaryIndustry": "Telecommunications and Media",
     "companySize": "Large",
     "founded": 1880,
-    "recruiterEmails": ["xxx"],
+    "recruiterEmails": ['recruiter@bell.ca'],
     "image": "https://media.licdn.com/dms/image/v2/D560BAQH4vgnYVp30eA/company-logo_200_200/company-logo_200_200/0/1688653379143?e=1737590400&v=beta&t=rC_3tNuGbM_1zRcyORDiXYWZVNPHVELLbkTX4Bv6vH0",
     "banner":"https://media.licdn.com/dms/image/v2/D563DAQE6X_nkgOMKZQ/image-scale_191_1128/image-scale_191_1128/0/1716308950963/bell_cover?e=2147483647&v=beta&t=KsXx2GUZOSxoT52_z_y0LsfGneJWC5WnImSrFbcoKSA",
     "linkedin": "https://www.linkedin.com/company/bell",
     "careerPages": "https://jobs.bell.ca/ca/en",
-    "salaryInfo": "Competitive salaries with stock options and performance-based bonuses."
+    "salaryInfo": "Competitive salaries with stock options and performance-based bonuses.",
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'was an enriching experience. I gained hands-on experience in tech, and the team was always ready to help me improve.!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'was an amazing place to intern. The company culture is energetic',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '24',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '27',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '28',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '30',
+        },
+      ],
+    },
   },
   {
     "name":"Bombardier",
-    "id": "company-10",
     "description": "Bombardier is a Canadian manufacturer specializing in business aircraft, offering design, production, and aftermarket services. Known for its iconic Learjet, Challenger, and Global series, Bombardier serves a wide range of clients, including multinational corporations and governments.",
     "culture": "Bombardier promotes a culture of innovation and precision, focusing on sustainability and operational excellence. The company supports its workforce with opportunities for professional growth and a commitment to safety and environmental responsibility.",
     "benefits": "Comprehensive health coverage, stock options, performance-based bonuses, and professional development programs. Employees are also offered flexible working arrangements.",
@@ -159,19 +541,278 @@ const companies = [
     "primaryIndustry": "Aerospace and Defense",
     "companySize": "Large",
     "founded": 1902,
-    "recruiterEmails": ["xxx"],
+    "recruiterEmails": ['recruiter@bombardier.com'],
     "image": "https://media.licdn.com/dms/image/v2/D4D0BAQHFre9L1IbnyA/company-logo_200_200/company-logo_200_200/0/1713990496093/bombardier_logo?e=1737590400&v=beta&t=AG98DvnOX7kLsOzx5lATu9mbFZQ_RdjBZRhKiAVhRmY",
     "banner":"https://media.licdn.com/dms/image/v2/D563DAQEb2Uf4O8-Bzg/image-scale_191_1128/image-scale_191_1128/0/1713990394270/bombardier_cover?e=2147483647&v=beta&t=1n8bCq3u9iCGFMUn8ioj7m0DQhozqjs6mkfWKy7lU6s",
     "linkedin": "https://www.linkedin.com/company/bombardier",
     "careerPages": "https://www.bombardier.com/en/careers",
-    "salaryInfo": "Competitive salaries with stock options and bonuses based on performance."
+    "salaryInfo": "Competitive salaries with stock options and bonuses based on performance.",
+    "reviews": {
+      create: [
+        {
+          rating: 5,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+        {
+          rating: 4,
+          review: 'Great work environment!',
+          reviewerId: '1',
+        },
+      ],
+    },
+    "salaries": {
+      create: [
+        {
+          wtNumber: 1,
+          salaryInfo: '20',
+        },
+        {
+          wtNumber: 2,
+          salaryInfo: '23',
+        },
+        {
+          wtNumber: 3,
+          salaryInfo: '26',
+        },
+        {
+          wtNumber: 4,
+          salaryInfo: '29',
+        },
+        {
+          wtNumber: 5,
+          salaryInfo: '32',
+        },
+        {
+          wtNumber: 6,
+          salaryInfo: '35',
+        },
+      ],
+    },
   }    
+];
+const jobs = [
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQHTvZwCx4p2Qg/company-logo_100_100/company-logo_100_100/0/1630640869849/amazon_logo?e=1738800000&v=beta&t=MRR139bOgOiLg5yCuJalxOQW4m2wzl4Jo6dCSXPvDgg",
+    "companyName": "Amazon",
+    "title": "Software Development Engineer Co-op and Intern",
+    "description": "Are you inspired by invention? Is problem solving through teamwork in your DNA? Do you like the idea of seeing how your work impacts the bigger picture? Answer yes to any of these and you’ll fit right in here at Amazon Robotics. We are a smart team of doers who work passionately to apply cutting edge advances in robotics and software to solve real-world challenges that will transform our customers’ experiences. We invent new improvements every day. We are Amazon Robotics and we will give you the tools and support you need to invent with us in ways that are rewarding, fulfilling, and fun. Amazon Robotics, a wholly owned subsidiary of Amazon.com, empowers a smarter, faster, more consistent customer experience through automation. Amazon Robotics automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands. Amazon Robotics has a dedicated focus on research and development to continuously explore new opportunities to extend its product lines into new areas.",
+    "location": "Toronto, ON, Canada",
+    "employmentType": "Internship",
+    "workType": "Full-time",
+    "internType": "Winter 2025",
+    "jobLink": "https://www.amazon.jobs/en/jobs/2750005/amazon-robotics-software-development-engineer-co-op-and-intern-2025-toronto?cmpid=SPLICX0248M&ss=paid&utm_campaign=cxro&utm_content=job_posting&utm_medium=social_media&utm_source=linkedin.com",
+    "linkedin": "https://www.linkedin.com/company/amazon/",
+    "skillsRequired": ["Python", "C++", "Software Development", "Robotics", "Object-Oriented Design", "Algorithms", "Data Structures"],
+    "basicQualifications": [
+      "Knowledge of computer science fundamentals such as object-oriented design, operating systems, algorithms, data structures, and complexity analysis",
+      "Experience with at least one modern programming language such as Python, C++, or Java",
+      "Strong problem-solving skills and a passion for innovation"
+    ],
+    "preferredQualifications": [
+      "Experience with distributed systems and relational databases",
+      "Knowledge of C/C++, Python, or Java",
+      "Familiarity with robotics, machine learning, or data analysis"
+    ],
+    "additionalInfo": "Amazon is committed to a diverse and inclusive workplace. Amazon is an equal opportunity employer and does not discriminate based on race, national origin, gender, gender identity, sexual orientation, disability, age, or other legally protected status."
+  },
+
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQEkjpiqeCK9Ag/company-logo_200_200/company-logo_200_200/0/1654804896089/amd_logo?e=1738800000&v=beta&t=kPGKtIgayblufH9aMX9edmhGudWMzqgNOgaa-PCaoyg", 
+    "companyName": "AMD", 
+    "title": "Software Engineering Intern/Co-op",
+    "description": "An exciting opportunity to contribute to AMD's next generation of technology innovations awaits you! We foster a high-energy, diverse work environment with outstanding career development opportunities. During this internship, you'll gain hands-on experience and work closely with AMD leaders, receive one-on-one mentorship, and participate in networking events.",
+    "location": "Markham, ON, Canada",
+    "employmentType": "Full-time",
+    "workType": "Onsite/Hybrid",
+    "internType": "Summer 2025",
+    "jobLink": "https://careers.amd.com/careers-home/jobs/54041?lang=en-us&iis=Job%20Board&iisn=Linkedin",
+    "linkedin": "https://www.linkedin.com/company/amd/life/multivoicesatamd/",
+    "skillsRequired": [
+      "C++", "Computer Engineering", "Software Engineering Concepts", "C/C++ Programming", 
+      "Python", "Windows PowerShell", "Linux Shell Scripting", "Java", "JavaScript", "UML", 
+      "UNIX/Linux OS", "MySQL", "PostgreSQL", "MongoDB", "Azure", "Django", "Rails", 
+      "Spring Boot", "HTML", "XML", "XSL", "Defect Tracking", "Testing", "Debugging", 
+      "Git", "Github", "Perforce", "OAuth", "SSL", "TLS", "PC/CPU Architecture", 
+      "Embedded Systems", "Microcontrollers"
+    ],
+    "basicQualifications": [
+      "Currently enrolled in a University program in Computer Engineering, Electrical Engineering, Computer Science, or a related field",
+      "Experience or knowledge in software engineering concepts, C/C++ programming, and scripting languages such as Python, Windows PowerShell, Linux shell scripts",
+      "Understanding of UNIX/Linux OS and databases such as MySQL, PostgreSQL, or MongoDB",
+      "Familiarity with cloud computing platforms (e.g., Azure) and web development frameworks (e.g., Django, Rails, Spring Boot)",
+      "Knowledge of markup languages like HTML, XML, XSL, and security technologies (OAuth, SSL, TLS)",
+      "Experience with version control (Git, Github, Perforce) and debugging methodologies"
+    ],  
+    "preferredQualifications": [
+      "Previous co-op or internship experience",
+      "Knowledge of PC/CPU architecture, embedded systems, and microcontrollers",
+      "Familiarity with defect tracking, testing, and debugging tools",
+      "Understanding of software security technologies and CI/CD pipelines"
+    ],
+    "keyResponsibilities": [
+      "Collaborate closely with software engineers to build and maintain AMD’s software applications",
+      "Gain exposure to the full software creation process, from design and build to testing and deployment",
+      "Build scripts to automate parts of the software development process",
+      "Learn debugging methodologies to investigate root causes of software issues",
+      "Support technical documentation and reporting for specific projects"
+    ],
+    "additionalInfo": "AMD is an equal opportunity employer that welcomes and considers all applicants without discrimination. Accommodations are provided for applicants with disabilities during all recruitment and selection stages."
+  },
+
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C4E0BAQEEcufOwTR8dA/company-logo_100_100/company-logo_100_100/0/1633723162871/seaspan_ulc_logo?e=1738800000&v=beta&t=NBRXXq6pKH5geEsxJHezkeC4RQzB75fpSJksLqR7QG8",
+    "companyName": "Seaspan ULC",
+    "title": "Intern, Outfit Engineering (4 Months)",
+    "description": "As part of the National Shipbuilding Strategy, Seaspan ULC is responsible for constructing vessels for the Canadian Coast Guard and Navy. This internship will immerse you in naval architecture and shipbuilding, working on vessel schematics, steel outfitting, and joinery systems.",
+    "location": "North Vancouver, BC, Canada",
+    "employmentType": "Internship",
+    "workType": "On-site",
+    "internType": "January 2025",
+    "jobLink": "https://hckz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/7039?utm_medium=jobshare",
+    "linkedin": "https://www.linkedin.com/company/seaspan-ulc/",
+    "skillsRequired": ["Naval Architecture", "Mechanical Engineering", "CAD/CAM", "AutoCAD", "Technical Documentation"],
+    "basicQualifications": [
+      "Currently enrolled in Naval Architecture, Marine Engineering, Mechanical Engineering, or a related field",
+      "Proficiency in CAD software, including AutoCAD",
+      "Ability to read and interpret technical specifications and drawings"
+    ],
+    "preferredQualifications": [
+      "Strong organizational skills and technical proficiency",
+      "Interest in heavy industrial settings and shipbuilding"
+    ],
+    "additionalInfo": "Seaspan ULC is an inclusive employer. All qualified individuals are encouraged to apply, and accommodations are available throughout the hiring process for those who require them."
+  },
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/D4E0BAQGG8SZ7WgOpLw/company-logo_200_200/company-logo_200_200/0/1719256890099/verafin_logo?e=1737590400&v=beta&t=8uY7TXutiRePKIKD1qpYFPyGYBffIXY6jbKDE8pt4Mc", 
+    "companyName": "Verafin", 
+    "title": "Software Engineering Intern",
+    "description": "Verafin is looking for a passionate and talented Software Engineering Intern to join our team! You'll work on innovative projects that help us combat financial crime. We offer a collaborative and supportive environment where you'll gain valuable experience alongside industry experts. During this internship, you'll contribute to code development, participate in code reviews, and learn about the latest technologies in the financial technology space.",
+    "location": "St. John's, NL, Canada",
+    "employmentType": "Full-time",
+    "workType": "Hybrid",
+    "internType": "Summer 2025",
+    "jobLink": "https://verafin.com/careers",
+    "linkedin": "https://linkedin.com/company/verafin",
+    "skillsRequired": [
+      "Java", "Python", "JavaScript", "SQL",
+      "Object-Oriented Programming (OOP)", 
+      "Software Development Lifecycle (SDLC)",
+      "Version control (Git)",
+      "Problem-solving and analytical skills",
+      "Strong communication and teamwork abilities"
+    ],
+    "basicQualifications": [
+      "Currently enrolled in a University program in Computer Science, Software Engineering, or a related field",
+      "Understanding of core programming concepts and data structures",
+      "Experience with at least one of the following programming languages: Java, Python, JavaScript",
+      "Familiarity with databases (SQL)",
+      "Interest in the financial technology industry"
+    ],
+    "preferredQualifications": [
+      "Experience with web development frameworks (e.g., Spring Boot, Django)",
+      "Exposure to API development and testing",
+      "Strong written and verbal communication skills"
+    ],
+    "keyResponsibilities": [
+      "Contribute to the development of new features and bug fixes",
+      "Participate in code reviews and unit testing",
+      "Learn and implement new technologies",
+      "Work collaboratively with engineers and other teams",
+      "Document code and technical processes"
+    ],
+    "additionalInfo": "Verafin is committed to fostering a diverse and inclusive workplace. We encourage applications from all qualified candidates."
+  },
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C4D0BAQHbSGuaNdonfg/company-logo_200_200/company-logo_200_200/0/1632407145065/colabsoftware_logo?e=1737590400&v=beta&t=o07J3CRNXEftN3E6LyEl4583ygGhpPr5hNcVGTUaTxU", 
+    "companyName": "Colab", 
+    "title": "Full Stack Developer Intern",
+    "description": "Colab is seeking a bright and motivated Software Engineering Intern to join our fast-paced environment! You'll work on cutting-edge projects that empower creators and businesses to collaborate seamlessly.  We offer a dynamic learning environment with mentorship opportunities where you'll gain hands-on experience and develop your technical skills. As a Software Engineering Intern, you'll contribute to code development, participate in agile development processes, and collaborate with cross-functional teams.",
+    "location": "St. John's, NL, Canada",
+    "employmentType": "Full-time",
+    "workType": "Onsite",
+    "internType": "Summer 2025",
+    "jobLink": "https://colabsoftware.com/careers",
+    "linkedin": "https://linkedin.com/company/colabsoftware",
+    "skillsRequired": [
+      "Java", "Python", "JavaScript",
+      "Software Development Lifecycle (SDLC)",
+      "API development and testing",
+      "Version control (Git)",
+      "Strong problem-solving and analytical skills",
+      "Excellent communication and teamwork abilities"
+    ],
+    "basicQualifications": [
+      "Currently enrolled in a University program in Computer Science, Software Engineering, or a related field",
+      "Understanding of core programming concepts and data structures",
+      "Experience with at least one of the following programming languages: Java, Python, JavaScript",
+      "Familiarity with web development frameworks",
+      "Interest in collaboration tools and productivity software"
+    ],
+    "preferredQualifications": [
+      "Experience with cloud platforms (e.g., AWS, Azure)",
+      "Knowledge of DevOps principles",
+      "Strong written and verbal communication skills"
+    ],
+    "keyResponsibilities": [
+      "Contribute to the development of new features and functionalities",
+      "Participate in agile development sprints and code reviews",
+      "Learn and implement new technologies relevant to collaboration tools",
+      "Work collaboratively with engineers, designers, and product managers",
+      "Write clear and concise technical documentation"
+    ],
+    "additionalInfo": "Colab is committed to building a diverse and inclusive team. We welcome applications from all qualified candidates."
+  },
+  {
+    "companyImage": "https://media.licdn.com/dms/image/v2/C560BAQF0LWhqSCovZg/company-logo_200_200/company-logo_200_200/0/1630638463303/cenovus_energy_logo?e=1737590400&v=beta&t=gxJECsbRWtmtb-mUGG1wH0z9fRMPcn9WHCWOOItQGpk", 
+    "companyName": "Cenovus Energy", 
+    "title": "Petroleum Engineering Intern",
+    "description": "Cenovus Energy is seeking a talented and motivated Petroleum Engineering Intern to join our team! You'll gain hands-on experience in the energy industry, working on projects related to reservoir engineering, production operations, and well planning. We offer a supportive and collaborative work environment where you'll learn from experienced professionals and contribute to real-world projects.",
+    "location": "Calgary, AB, Canada",
+    "employmentType": "Full-time",
+    "workType": "Onsite",
+    "internType": "Summer 2025",
+    "jobLink": "https://www.cenovus.com/careers",
+    "linkedin": "https://www.linkedin.com/company/cenovus-energy",
+    "skillsRequired": [
+      "Petroleum Engineering fundamentals",
+      "Reservoir simulation",
+      "Well planning and drilling",
+      "Production operations",
+      "Data analysis and interpretation",
+      "Problem-solving and critical thinking skills"
+    ],
+    "basicQualifications": [
+      "Currently enrolled in a University program in Petroleum Engineering or a related field",
+      "Strong academic performance",
+      "Knowledge of reservoir engineering principles",
+      "Familiarity with industry software (e.g., Petrel, Eclipse, Schlumberger) is an asset"
+    ],
+    "preferredQualifications": [
+      "Previous internship or co-op experience in the energy industry",
+      "Experience with field work and data collection",
+      "Strong communication and teamwork skills"
+    ],
+    "keyResponsibilities": [
+      "Assist in reservoir simulation and modeling",
+      "Support well planning and drilling operations",
+      "Analyze production data and identify optimization opportunities",
+      "Contribute to technical reports and presentations",
+      "Collaborate with multidisciplinary teams to achieve project objectives"
+    ],
+    "additionalInfo": "Cenovus Energy is committed to creating a diverse and inclusive workplace. We encourage applications from all qualified candidates."
+  }
 ];
 
 async function main() {
   for (const company of companies) {
     await prisma.companies.create({
       data: company,
+    });
+  }
+  for (const job of jobs) {
+    await prisma.jobs.create({
+      data: job,
     });
   }
 }
