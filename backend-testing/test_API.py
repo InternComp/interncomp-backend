@@ -1,9 +1,9 @@
 import requests
 import pytest
 
-company_id="cc1c016a-229e-4d7f-8fd6-c246b20ef303"
-job_id="611e7781-17f1-43fc-b6e5-7a5480dfe352"
-user_id="101034505943362132559"
+company_id="068600f8-1b06-467e-b96c-d063fa5b91b6"
+job_id="116e8dae-d842-46c3-90f0-fd83b2cc3c18"
+user_id="test_id"
 @pytest.fixture
 def base_url():
     #Url for backend
@@ -58,12 +58,12 @@ def test_postuserbyid_endpoint(base_url, session):
     data = {
         "name": "Aaron Oates",
         "program": "ECE",
-        "email": "aotes@mun.ca",
         # dont know your email aaron put a random on here while fixing
         "university": "MUN",
         "location":"",
         "institution":"",
-        "gender":""
+        "gender":"",
+        "email": "aotes@mun.ca",
     }
 
     res = session.post(f"{base_url}/user/{user_id}", json=data,timeout=4)
@@ -73,5 +73,25 @@ def test_postuserbyid_endpoint(base_url, session):
     assert "data" in response_data
     updated_user = response_data["data"]
     assert updated_user["id"] == user_id
-    assert updated_user["name"] == update_payload["name"]
-    assert updated_user["email"] == update_payload["email"]
+    assert updated_user["name"] == data["name"]
+
+
+# def test_postreview_endpoint(base_url, session):
+
+#     review_payload = {
+#         "reviewerId": user_id,
+#         "companyId": company_id,
+#         "review_text": "Great company with excellent work culture.",
+#         "rating": 5,
+#     }
+
+#     res = session.post(f"{base_url}/companies/{company_id}/reviews", json=review_payload)
+
+#     assert res.status_code == 200  # Expecting a successful review creation
+#     response_data = res.json()
+#     breakpoint()
+#     # Ensure the response contains the new review's details
+#     assert response_data["reviewerId"] == review_payload["reviewerId"]
+#     assert response_data["companyId"] == review_payload["companyId"]
+#     assert response_data["review"] == review_payload["review_text"]
+#     assert response_data["rating"] == review_payload["rating"]

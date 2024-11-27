@@ -81,32 +81,20 @@ app.post('/user/:id',async(req,res)=>{
     const user=await prisma.user.findUnique({
         where: {id:id}
     });
-    try{
-        const setUser=await prisma.user.upsert({
+    if(user){
+        const setUser=await prisma.user.update({
             where: {id:id},
-            update:{
+            data:{
                 name, 
                 program, 
                 university,
                 location,
                 institution,
-                gender,   
-            },
-            create:{
-                name, 
-                program, 
-                university,
-                location,
-                institution,
-                gender,
+                gender         
             }
         });
         console.log(setUser)
-        res.json({ data: setUser }).send(200)
-    }
-    catch(e){
-        console.log(e)
-        res.sendStatus(500);
+        res.json({ data: setUser }).ae
     }
 
 }
